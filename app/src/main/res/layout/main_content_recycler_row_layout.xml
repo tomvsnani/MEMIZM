@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginVertical="8dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="400dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/chimney"
+      />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/recreateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="16dp"
+        android:text="Recreate"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/black"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/shareImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recreateButton"
+        app:layout_constraintStart_toEndOf="@+id/recreateButton"
+        app:layout_constraintTop_toTopOf="@+id/recreateButton"
+        android:src="@drawable/ic_baseline_share_24" />
+
+    <ImageView
+        android:id="@+id/favImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shareImageView"
+        app:layout_constraintStart_toEndOf="@+id/shareImageView"
+        app:layout_constraintTop_toTopOf="@+id/shareImageView"
+        android:src="@drawable/ic_baseline_favorite_border_24" />
+
+    <ImageView
+        android:id="@+id/saveImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/favImageView"
+        app:layout_constraintStart_toEndOf="@+id/favImageView"
+        app:layout_constraintTop_toTopOf="@+id/favImageView"
+        android:src="@drawable/ic_baseline_save_24" />
+
+    <TextView
+        android:id="@+id/shareCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:text="122 shares"
+        app:layout_constraintBottom_toBottomOf="@+id/saveImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/saveImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
