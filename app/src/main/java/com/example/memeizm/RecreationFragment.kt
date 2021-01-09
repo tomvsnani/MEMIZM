@@ -3,22 +3,17 @@ package com.example.memeizm
 import android.annotation.SuppressLint
 import android.graphics.*
 import android.os.Bundle
-import android.os.Environment
 import android.util.Log
 import android.view.*
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
-import androidx.core.view.drawToBitmap
 import androidx.fragment.app.Fragment
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.dinuscxj.gesture.MultiTouchGestureDetector
 import com.example.memeizm.Adapters.ViewpagerAdapter
 import com.example.memeizm.databinding.FragmentRecreationBinding
 import com.google.android.material.tabs.TabLayoutMediator
-import java.io.File
-import java.io.FileOutputStream
+import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 
@@ -26,7 +21,21 @@ import kotlin.math.min
 class RecreationFragment : Fragment(R.layout.fragment_recreation) {
     lateinit var binding: FragmentRecreationBinding
     lateinit var multiTouchGestureListener: MultiTouchGestureDetector.OnMultiTouchGestureListener
-    var matrix = Matrix()
+    lateinit var listener: ScaleGestureDetector.OnScaleGestureListener
+    val margin = 40
+    var count = 0;
+    private var scalex = 1f
+    private var scaley = 1f
+    var pointer_id = -1
+    lateinit var hashMap: HashMap<Int, View>
+    var pointersCount = 0;
+    var countt = 0;
+    var multiTouchGestureDetector: MultiTouchGestureDetector? = null
+    var hashMapGesture = HashMap<View, MultiTouchGestureDetector>()
+    var view1: View? = null
+
+    var viewTouchPoint = -1
+    lateinit var text: View
     override fun onCreate(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
         super.onCreate(savedInstanceState)
@@ -36,43 +45,15 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRecreationBinding.bind(view)
-
+        hashMap = HashMap()
         (activity as MainActivity).setUpFragmentsToolbarProperties(
             "Recreation",
             true
         )
-        var rotationfactor=0.1f
-        multiTouchGestureListener = object : MultiTouchGestureDetector.OnMultiTouchGestureListener {
-            override fun onScale(detector: MultiTouchGestureDetector?) {
+        var rotationfactor = 0f
+        var scaleFactor = 1f
 
-            }
 
-            override fun onMove(detector: MultiTouchGestureDetector?) {
-
-            }
-
-            override fun onRotate(detector: MultiTouchGestureDetector?) {
-                Log.d("rotationnn",detector?.rotation.toString())
-                rotationfactor+= detector?.rotation?.toFloat()!!
-//              rotationfactor=  max(0.1f, min(rotationfactor, 5.0f))
-                binding.mainEditableImageView.apply {
-
-                    rotation=rotationfactor
-//                    rotation=rotationfactor
-                }
-            }
-
-            override fun onBegin(detector: MultiTouchGestureDetector?): Boolean {
-                return true
-            }
-
-            override fun onEnd(detector: MultiTouchGestureDetector?) {
-
-            }
-        }
-
-        var multiTouchGestureDetector =
-            MultiTouchGestureDetector(context, multiTouchGestureListener)
 //        binding.root.setOnClickListener {
 //            binding.mainEditableImageView.apply {
 //
@@ -113,88 +94,190 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
 //                )
 //        })
 
-        var scaleFactor = 1f
-        var listener = object : ScaleGestureDetector.OnScaleGestureListener {
-            override fun onScale(detector: ScaleGestureDetector?): Boolean {
+        binding.downloadbutton.setOnClickListener {
 
-
-                scaleFactor *= detector!!.getScaleFactor();
-                Log.d("scaleevent", detector!!.scaleFactor.toString())
-//
-                // Don't let the object get too small or too large.
-                scaleFactor = max(0.1f, min(scaleFactor, 5.0f));
-                binding.mainEditableImageView.scaleX = scaleFactor
-                binding.mainEditableImageView.scaleY = scaleFactor
-//                if (detector!!.scaleFactor < scaleFactor || detector!!.scaleFactor > scaleFactor) {
-                Log.d("enteredd", scaleFactor.toString())
-//                    return false
-//                }
-
-                return true
-            }
-
-            override fun onScaleBegin(detector: ScaleGestureDetector?): Boolean {
-                return true
-            }
-
-            override fun onScaleEnd(detector: ScaleGestureDetector?) {
-                return Unit
-            }
+            text = generateViewDynamically()
         }
 
-        var scaleGestureDetector = ScaleGestureDetector(context, listener)
-        binding.root.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
-                multiTouchGestureDetector.onTouchEvent(event)
-                  scaleGestureDetector.onTouchEvent(event)
-                Log.d("herrree", "event")
-                var textview: View? = null
-                when (event?.action) {
-                    MotionEvent.ACTION_DOWN -> {
-                        Log.d("motioneventtt", "Action down")
 
-                    }
-                    MotionEvent.ACTION_MOVE -> {
-                        Log.d("motioneventtt", "Action Move")
-                    }
-                    MotionEvent.ACTION_UP -> {
-                        Log.d("motioneventtt", "Action UP")
 
-                    }
-                    MotionEvent.ACTION_POINTER_DOWN -> {
-                        Log.d("motioneventtt", "Action POINTER DOWN")
-                    }
-                    MotionEvent.ACTION_POINTER_UP -> {
-                        Log.d("motioneventtt", "Action POINTER UP")
 
-                    }
-                    MotionEvent.ACTION_HOVER_MOVE -> {
-                        Log.d("motioneventtt", "Action HOVER MOVE")
-                    }
-                    MotionEvent.ACTION_OUTSIDE -> {
-                        Log.d("motioneventtt", "Action OUTSIDE")
 
+
+
+
+
+
+        binding.constrait.setOnTouchListener { v, event ->
+            pointersCount = event.pointerCount
+
+            Log.d("eventtt",event.action.toString())
+            when (event.action and event.actionMasked) {
+
+                MotionEvent.ACTION_DOWN -> {
+                    countt++
+//                    if(countt==3)
+//                        ( text as TextView).text="GHGFYggdygcxghbcxkh"
+                    var rectF = Rect()
+                    var j = 0;
+
+                    for (i in hashMap) {
+                        i.value.apply {
+                            getHitRect(rectF)
+                            if (rectF.contains(event.x.toInt(), event.y.toInt()))
+                                j = 1
+                        }
+                        if (j == 1) {
+                            view1 = i.value
+                            break
+                        }
                     }
-                    MotionEvent.ACTION_POINTER_INDEX_SHIFT -> {
-                        Log.d("motioneventtt", "Action POINTER INDEX SHIFT")
+
+                    if (view1 != null) {
+                        event.apply {
+                            pointer_id = getPointerId(0)
+                            scalex = view1!!.x - getRawX(findPointerIndex(pointer_id))
+                            scaley = view1!!.y - getRawY(findPointerIndex(pointer_id))
+
+                        }
+                       // detectWhereTouched(view1!!.width, view1!!.height, event, view1!!)
+                        if (!hashMapGesture.containsKey(view1)) {
+                            multiTouchGestureDetector = MultiTouchGestureDetector(
+                                context, setListener(view1!!, 1.0f, 0f)
+                            )
+
+                            hashMapGesture[view1!!] = multiTouchGestureDetector!!
+                        }
+                        else{
+                            multiTouchGestureDetector= hashMapGesture[view1!!]
+                        }
                     }
                 }
+
+                MotionEvent.ACTION_MOVE -> {
+                    Log.d("eventttookk",event.action.toString())
+                    if(pointersCount==1) {
+                        view1!!.apply {
+                            x = scalex + event.getRawX(event.findPointerIndex(pointer_id))
+                            y = scaley + event.getRawY(event.findPointerIndex(pointer_id))
+                        }
+                    }
+
+                }
+
+                MotionEvent.ACTION_POINTER_UP -> {
+                    event.apply {
+                        if (getPointerId(actionIndex) == pointer_id) {
+                            var newPointerIndex = if (actionIndex == 0) 1 else 0
+                            scalex =view1!!.x- getRawX(newPointerIndex)
+                            scaley = view1!!.y-getRawY(newPointerIndex)
+                            pointer_id = getPointerId(newPointerIndex)
+                        }
+
+                    }
+
+                }
+
+            }
+            if (multiTouchGestureDetector != null) {
+                multiTouchGestureDetector?.onTouchEvent(event)
+            }
+
+
+//            binding.frame.apply {
+//
+//                getHitRect(rectF)
+//            }
+//            (v as View).apply {
+//                touchDelegate = TouchDelegate(rectF, binding.frame)
+//            }
+
+
+            return@setOnTouchListener true
+        }
+
+
+        attachViewPager()
+
+    }
+
+    private fun setListener(
+        v: View,
+        scaleFactor1: Float,
+        rotationfactor: Float
+    ): MultiTouchGestureDetector.OnMultiTouchGestureListener {
+        var scaleFactor11 = scaleFactor1
+        var rotationfactor1 = rotationfactor
+
+        return object : MultiTouchGestureDetector.OnMultiTouchGestureListener {
+            override fun onScale(detector: MultiTouchGestureDetector?) {
+                v.apply {
+                    scaleFactor11 *= detector!!.scale
+                    scaleFactor11 = max(0.1f, min(scaleFactor11, 5.0f))
+                    scaleX = scaleFactor11
+                    scaleY = scaleFactor11
+                    when (viewTouchPoint) {
+                        3 -> {
+                            pivotX = 0f
+                            pivotY = 0f
+                        }
+                        2 -> {
+                            pivotX = v.width.toFloat()
+                            pivotY = 0f
+                        }
+                        1 -> {
+                            pivotX = 0f
+                            pivotY = v.height.toFloat()
+                        }
+                        0 -> {
+                            pivotX = v.width.toFloat()
+                            pivotY = v.height.toFloat()
+                        }
+                    }
+
+
+                }
+            }
+
+            override fun onMove(detector: MultiTouchGestureDetector?) {
+//                if (pointersCount == 1) {
+//                    v.x = v.x + detector!!.moveX
+//                    v.y = v.y + detector!!.moveY
+//                }
+            }
+
+            override fun onRotate(detector: MultiTouchGestureDetector?) {
+                rotationfactor1 += detector!!.rotation
+                v.apply {
+
+                    rotation = rotationfactor1
+                }
+
+            }
+
+            override fun onBegin(detector: MultiTouchGestureDetector?): Boolean {
                 return true
             }
 
-        })
+            override fun onEnd(detector: MultiTouchGestureDetector?) {
 
+            }
+        }
+    }
+
+
+    private fun attachViewPager() {
         var viewPager2: ViewPager2 = binding.viewpager2
 
         viewPager2.adapter = ViewpagerAdapter(this)
 
-
+        viewPager2.isUserInputEnabled = false
 
         TabLayoutMediator(binding.tablayout, binding.viewpager2) { tab, position ->
 
             when (position) {
                 0 -> {
-//                    tab.setCustomView(LayoutInflater.from(context).inflate(R.layout.custom_tab_view_layout,null,false))
+                    //                    tab.setCustomView(LayoutInflater.from(context).inflate(R.layout.custom_tab_view_layout,null,false))
                     tab.text = "Text"
                     tab.setIcon(R.drawable.ic_baseline_text_fields_24)
                 }
@@ -208,7 +291,61 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
                 }
             }
         }.attach()
+    }
 
+
+    private fun generateViewDynamically(): View {
+
+        var constraintSet = ConstraintSet()
+        var id = View.generateViewId()
+
+        var text = TextView(context).apply {
+            text = "hrllo"
+            textSize = 60f
+            setTextColor(Color.RED)
+            setPadding(40, 40, 40, 40)
+            setBackgroundColor(Color.BLUE)
+
+        }
+
+        //                             text.layoutParams=ConstraintLayout.LayoutParams()
+        text.id = id
+        binding.constrait.addView(text)
+        constraintSet.clone(binding.constrait)
+        constraintSet.apply {
+            setMargin(id, ConstraintSet.TOP, count * margin)
+
+            connect(
+                text.id,
+                ConstraintSet.TOP,
+                binding.downloadbutton.id,
+                ConstraintSet.BOTTOM
+            )
+            connect(
+                text.id,
+                ConstraintSet.BOTTOM,
+                binding.mainEditableImageView.id,
+                ConstraintSet.BOTTOM,
+            )
+            connect(
+                text.id,
+                ConstraintSet.START,
+                ConstraintSet.PARENT_ID,
+                ConstraintSet.START,
+            )
+            connect(
+                text.id,
+                ConstraintSet.END,
+                ConstraintSet.PARENT_ID,
+                ConstraintSet.END,
+            )
+        }
+        constraintSet.applyTo(binding.constrait)
+        hashMap[id] = text
+        binding.constrait.bringChildToFront(binding.mainEditableImageView)
+
+
+        return text!!
     }
 
     companion object {
@@ -224,5 +361,17 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
         return true
     }
 
+    fun detectWhereTouched(width: Int, height: Int, event: MotionEvent, view: View): Int {
+        Log.d("rounddd", "${event.x} ${event.y}  ${view.x}  ${view.y}")
+        var xDiff = abs(event.x - view.x)
+        var yDiff = abs(event.y - view.y)
+        when {
+            xDiff <= 100 && yDiff <= 100 -> viewTouchPoint = 0
+            xDiff <= 100 && yDiff > 100 -> viewTouchPoint = 2
+            xDiff > 100 && yDiff <= 100 -> viewTouchPoint = 1
+            xDiff > 100 && yDiff > 100 -> viewTouchPoint = 3
+        }
+        return viewTouchPoint
 
+    }
 }

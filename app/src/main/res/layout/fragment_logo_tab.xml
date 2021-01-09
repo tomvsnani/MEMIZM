@@ -5,10 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".LogoTabFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <com.example.memeizm.CustomImageView
+        android:id="@+id/customview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
 
+        android:background="@color/red"
+        android:src="@drawable/chimney"
+        android:text="heyyyy"
+
+        android:textColor="#fff" />
 </FrameLayout>

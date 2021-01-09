@@ -1,0 +1,26 @@
+com/example/memeizm/databinding/CustomViewAndroidBinding.java
+ com.example.memeizm.databinding.CustomViewAndroidBinding
+com/example/memeizm/BuildConfig.java
+ com.example.memeizm.BuildConfig
+com/example/memeizm/databinding/ActivityMainBinding.java
+ com.example.memeizm.databinding.ActivityMainBinding
+com/example/memeizm/databinding/NotificationIconBinding.java
+ com.example.memeizm.databinding.NotificationIconBinding
+com/example/memeizm/databinding/FragmentMyCreationsBinding.java
+ com.example.memeizm.databinding.FragmentMyCreationsBinding
+com/example/memeizm/databinding/CategoriesRowLayoutBinding.java
+ com.example.memeizm.databinding.CategoriesRowLayoutBinding
+com/example/memeizm/databinding/CustomTabViewLayoutBinding.java
+ com.example.memeizm.databinding.CustomTabViewLayoutBinding
+com/example/memeizm/databinding/FragmentMainBinding.java
+ com.example.memeizm.databinding.FragmentMainBinding
+com/example/memeizm/databinding/FragmentRecreationBinding.java
+ com.example.memeizm.databinding.FragmentRecreationBinding
+com/example/memeizm/databinding/FragmentTextTabBinding.java
+ com.example.memeizm.databinding.FragmentTextTabBinding
+com/example/memeizm/databinding/FragmentLogoTabBinding.java
+ com.example.memeizm.databinding.FragmentLogoTabBinding
+com/example/memeizm/databinding/MainContentRecyclerRowLayoutBinding.java
+ com.example.memeizm.databinding.MainContentRecyclerRowLayoutBinding
+com/example/memeizm/databinding/FragmentGallaryTabBinding.java
+ com.example.memeizm.databinding.FragmentGallaryTabBinding
