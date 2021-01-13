@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewpager2.widget.ViewPager2;
+import com.example.memeizm.CustomScrollView;
 import com.example.memeizm.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
@@ -31,6 +32,9 @@ public final class FragmentRecreationBinding implements ViewBinding {
   public final ImageView mainEditableImageView;
 
   @NonNull
+  public final CustomScrollView nestedScroll;
+
+  @NonNull
   public final ImageView shareimageview;
 
   @NonNull
@@ -41,12 +45,14 @@ public final class FragmentRecreationBinding implements ViewBinding {
 
   private FragmentRecreationBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout constrait, @NonNull MaterialButton downloadbutton,
-      @NonNull ImageView mainEditableImageView, @NonNull ImageView shareimageview,
-      @NonNull TabLayout tablayout, @NonNull ViewPager2 viewpager2) {
+      @NonNull ImageView mainEditableImageView, @NonNull CustomScrollView nestedScroll,
+      @NonNull ImageView shareimageview, @NonNull TabLayout tablayout,
+      @NonNull ViewPager2 viewpager2) {
     this.rootView = rootView;
     this.constrait = constrait;
     this.downloadbutton = downloadbutton;
     this.mainEditableImageView = mainEditableImageView;
+    this.nestedScroll = nestedScroll;
     this.shareimageview = shareimageview;
     this.tablayout = tablayout;
     this.viewpager2 = viewpager2;
@@ -97,6 +103,12 @@ public final class FragmentRecreationBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nestedScroll;
+      CustomScrollView nestedScroll = rootView.findViewById(id);
+      if (nestedScroll == null) {
+        break missingId;
+      }
+
       id = R.id.shareimageview;
       ImageView shareimageview = rootView.findViewById(id);
       if (shareimageview == null) {
@@ -116,7 +128,7 @@ public final class FragmentRecreationBinding implements ViewBinding {
       }
 
       return new FragmentRecreationBinding((ConstraintLayout) rootView, constrait, downloadbutton,
-          mainEditableImageView, shareimageview, tablayout, viewpager2);
+          mainEditableImageView, nestedScroll, shareimageview, tablayout, viewpager2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,12 +4,10 @@ package com.example.memeizm.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.example.memeizm.R;
 import java.lang.NullPointerException;
@@ -21,37 +19,16 @@ public final class FragmentTextTabBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final EditText editText;
+  public final ConstraintLayout constraint;
 
   @NonNull
-  public final ImageView image1;
+  public final RecyclerView customTextRecyclerview;
 
-  @NonNull
-  public final ImageView image2;
-
-  @NonNull
-  public final ImageView image3;
-
-  @NonNull
-  public final ImageView image4;
-
-  @NonNull
-  public final LinearLayout linearLayout;
-
-  @NonNull
-  public final View view;
-
-  private FragmentTextTabBinding(@NonNull ConstraintLayout rootView, @NonNull EditText editText,
-      @NonNull ImageView image1, @NonNull ImageView image2, @NonNull ImageView image3,
-      @NonNull ImageView image4, @NonNull LinearLayout linearLayout, @NonNull View view) {
+  private FragmentTextTabBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout constraint, @NonNull RecyclerView customTextRecyclerview) {
     this.rootView = rootView;
-    this.editText = editText;
-    this.image1 = image1;
-    this.image2 = image2;
-    this.image3 = image3;
-    this.image4 = image4;
-    this.linearLayout = linearLayout;
-    this.view = view;
+    this.constraint = constraint;
+    this.customTextRecyclerview = customTextRecyclerview;
   }
 
   @Override
@@ -81,50 +58,16 @@ public final class FragmentTextTabBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.editText;
-      EditText editText = rootView.findViewById(id);
-      if (editText == null) {
+      ConstraintLayout constraint = (ConstraintLayout) rootView;
+
+      id = R.id.custom_text_recyclerview;
+      RecyclerView customTextRecyclerview = rootView.findViewById(id);
+      if (customTextRecyclerview == null) {
         break missingId;
       }
 
-      id = R.id.image1;
-      ImageView image1 = rootView.findViewById(id);
-      if (image1 == null) {
-        break missingId;
-      }
-
-      id = R.id.image2;
-      ImageView image2 = rootView.findViewById(id);
-      if (image2 == null) {
-        break missingId;
-      }
-
-      id = R.id.image3;
-      ImageView image3 = rootView.findViewById(id);
-      if (image3 == null) {
-        break missingId;
-      }
-
-      id = R.id.image4;
-      ImageView image4 = rootView.findViewById(id);
-      if (image4 == null) {
-        break missingId;
-      }
-
-      id = R.id.linearLayout;
-      LinearLayout linearLayout = rootView.findViewById(id);
-      if (linearLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.view;
-      View view = rootView.findViewById(id);
-      if (view == null) {
-        break missingId;
-      }
-
-      return new FragmentTextTabBinding((ConstraintLayout) rootView, editText, image1, image2,
-          image3, image4, linearLayout, view);
+      return new FragmentTextTabBinding((ConstraintLayout) rootView, constraint,
+          customTextRecyclerview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

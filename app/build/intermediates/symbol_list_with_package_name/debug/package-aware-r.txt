@@ -27,12 +27,19 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fragment_fast_out_extra_slow_in
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
+animator fragment_close_enter
+animator fragment_close_exit
+animator fragment_fade_enter
+animator fragment_fade_exit
+animator fragment_open_enter
+animator fragment_open_exit
 animator mtrl_btn_state_list_anim
 animator mtrl_btn_unelevated_state_list_anim
 animator mtrl_card_state_list_anim
@@ -990,6 +997,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color graywhite
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1579,12 +1587,15 @@ drawable ic_baseline_format_align_right
 drawable ic_baseline_format_align_right_24
 drawable ic_baseline_format_color_text_24
 drawable ic_baseline_home_24
+drawable ic_baseline_image_24
 drawable ic_baseline_psychology_24
 drawable ic_baseline_save_24
 drawable ic_baseline_search_24
 drawable ic_baseline_settings_24
 drawable ic_baseline_share_24
 drawable ic_baseline_text_fields_24
+drawable ic_baseline_visibility_24
+drawable ic_baseline_visibility_off_24
 drawable ic_custom_size___1
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1750,6 +1761,8 @@ id collapseActionView
 id collectionName1
 id collectionName2
 id confirm_button
+id constraint
+id constraintLayout
 id constrait
 id container
 id content
@@ -1757,7 +1770,10 @@ id contentPanel
 id coordinator
 id cos
 id custom
+id customEditText
 id customPanel
+id custom_text
+id custom_text_recyclerview
 id customview
 id cut
 id date_picker_actions
@@ -1778,6 +1794,7 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
+id doneButton
 id downloadbutton
 id dragDown
 id dragEnd
@@ -1810,6 +1827,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1835,6 +1853,7 @@ id image4
 id imageView
 id info
 id invisible
+id isViewActiveImageView
 id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
@@ -1889,6 +1908,7 @@ id mtrl_picker_title_text
 id multiply
 id navigation_header_container
 id navigationview
+id nestedScroll
 id never
 id noScroll
 id none
@@ -1968,6 +1988,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id special_effects_controller_view_tag
 id spline
 id split_action_bar
 id spread
@@ -2041,8 +2062,12 @@ id up
 id useLogo
 id view
 id view_offset_helper
+id view_tree_lifecycle_owner
+id view_tree_saved_state_registry_owner
+id view_tree_view_model_store_owner
 id viewpager2
 id visible
+id visible_removing_fragment_view_tag
 id withText
 id withinBounds
 id wrap
@@ -2110,8 +2135,10 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout categories_row_layout
+layout custom_alert_dialog
 layout custom_dialog
 layout custom_tab_view_layout
+layout custom_text_tab_row_layout
 layout custom_view_android
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2129,6 +2156,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_gallary_tab
+layout fragment_image
 layout fragment_logo_tab
 layout fragment_main
 layout fragment_my_creations
@@ -3035,6 +3063,8 @@ styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
+styleable Fragment android_name android_id android_tag
+styleable FragmentContainerView android_name android_tag
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth

@@ -50,66 +50,79 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/downloadbutton">-->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constrait"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <com.example.memeizm.CustomScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/downloadbutton">
 
-        <ImageView
-            android:id="@+id/mainEditableImageView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
+            android:layout_height="match_parent">
 
-            android:src="@drawable/venytemp"
-            android:text="@string/app_name"
-            android:textColor="@color/red"
+            <androidx.constraintlayout.widget.ConstraintLayout
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.83" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--    </FrameLayout>-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/mainEditableImageViw"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:background="@drawable/corner_radius_stroke_drawable"-->
-    <!--        android:minHeight="250dp"-->
-    <!--        android:padding="10dp"-->
-    <!--        android:src="@drawable/chimney"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@id/mainEditableImageView"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/downloadbutton" />-->
+                android:id="@+id/constrait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/tablayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constrait" />
+                <ImageView
+                    android:id="@+id/mainEditableImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tablayout" />
+
+                    android:text="@string/app_name"
+                    android:textColor="@color/red"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.83" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--    </FrameLayout>-->
+
+            <!--    <TextView-->
+            <!--        android:id="@+id/mainEditableImageViw"-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:background="@drawable/corner_radius_stroke_drawable"-->
+            <!--        android:minHeight="250dp"-->
+            <!--        android:padding="10dp"-->
+            <!--        android:src="@drawable/chimney"-->
+            <!--        app:layout_constraintBottom_toBottomOf="@id/mainEditableImageView"-->
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/downloadbutton" />-->
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constrait" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tablayout"
+                app:layout_constraintStart_toStartOf="@+id/tablayout"
+                app:layout_constraintTop_toBottomOf="@+id/tablayout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.example.memeizm.CustomScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

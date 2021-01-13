@@ -1,3 +1,5 @@
+com/example/memeizm/databinding/FragmentImageBinding.java
+ com.example.memeizm.databinding.FragmentImageBinding
 com/example/memeizm/databinding/CustomViewAndroidBinding.java
  com.example.memeizm.databinding.CustomViewAndroidBinding
 com/example/memeizm/BuildConfig.java
@@ -24,3 +26,7 @@ com/example/memeizm/databinding/MainContentRecyclerRowLayoutBinding.java
  com.example.memeizm.databinding.MainContentRecyclerRowLayoutBinding
 com/example/memeizm/databinding/FragmentGallaryTabBinding.java
  com.example.memeizm.databinding.FragmentGallaryTabBinding
+com/example/memeizm/databinding/CustomAlertDialogBinding.java
+ com.example.memeizm.databinding.CustomAlertDialogBinding
+com/example/memeizm/databinding/CustomTextTabRowLayoutBinding.java
+ com.example.memeizm.databinding.CustomTextTabRowLayoutBinding

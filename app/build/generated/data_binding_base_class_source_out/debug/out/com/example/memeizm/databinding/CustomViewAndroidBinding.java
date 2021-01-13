@@ -4,6 +4,7 @@ package com.example.memeizm.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -24,16 +25,21 @@ public final class CustomViewAndroidBinding implements ViewBinding {
   public final View bottomRight;
 
   @NonNull
+  public final EditText customText;
+
+  @NonNull
   public final View topLeft;
 
   @NonNull
   public final View topRight;
 
   private CustomViewAndroidBinding(@NonNull ConstraintLayout rootView, @NonNull View bottomLeft,
-      @NonNull View bottomRight, @NonNull View topLeft, @NonNull View topRight) {
+      @NonNull View bottomRight, @NonNull EditText customText, @NonNull View topLeft,
+      @NonNull View topRight) {
     this.rootView = rootView;
     this.bottomLeft = bottomLeft;
     this.bottomRight = bottomRight;
+    this.customText = customText;
     this.topLeft = topLeft;
     this.topRight = topRight;
   }
@@ -77,6 +83,12 @@ public final class CustomViewAndroidBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.custom_text;
+      EditText customText = rootView.findViewById(id);
+      if (customText == null) {
+        break missingId;
+      }
+
       id = R.id.top_left;
       View topLeft = rootView.findViewById(id);
       if (topLeft == null) {
@@ -90,7 +102,7 @@ public final class CustomViewAndroidBinding implements ViewBinding {
       }
 
       return new CustomViewAndroidBinding((ConstraintLayout) rootView, bottomLeft, bottomRight,
-          topLeft, topRight);
+          customText, topLeft, topRight);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
