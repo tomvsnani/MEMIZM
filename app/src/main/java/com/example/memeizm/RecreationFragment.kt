@@ -11,12 +11,14 @@ import android.os.Bundle
 import android.os.Environment
 import android.util.Log
 import android.view.*
+import android.view.View.MeasureSpec.makeMeasureSpec
 import android.webkit.MimeTypeMap
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.MimeTypeFilter
 import androidx.core.view.drawToBitmap
@@ -24,14 +26,18 @@ import androidx.core.view.setPadding
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.dinuscxj.gesture.MultiTouchGestureDetector
+import com.example.memeizm.Adapters.ImageFragment
 import com.example.memeizm.Adapters.ViewpagerAdapter
 import com.example.memeizm.databinding.CustomAlertDialogBinding
 import com.example.memeizm.databinding.FragmentRecreationBinding
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import org.w3c.dom.Text
 import java.io.File
 import java.io.FileOutputStream
 import java.lang.Exception
-import java.util.Comparator
+import java.util.*
+import kotlin.collections.HashMap
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
@@ -54,6 +60,7 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
     var view1: View? = null
     var isTransformLocked = false
     var tabSize = 4
+    lateinit var viewpagerFragmentList: List<Fragment>
 
     var viewTouchPoint = -1
     lateinit var text: View
@@ -267,21 +274,34 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
 
 
     private fun attachViewPager() {
+        viewpagerFragmentList = if (tabSize == 4) mutableListOf(
+            ImageFragment(),
+            TextTabFragment(),
+            GallaryTabFragment(),
+            LogoTabFragment()
+        ) else mutableListOf(
+            TextTabFragment(),
+            GallaryTabFragment(),
+            LogoTabFragment()
+        )
+
         var viewPager2: ViewPager2 = binding.viewpager2
 
         viewPager2.adapter = ViewpagerAdapter(this, tabSize)
 
-        viewPager2.isUserInputEnabled = false
+//        viewPager2.isUserInputEnabled = false
 
         TabLayoutMediator(binding.tablayout, viewPager2) { tab, position ->
+
             tab.view.setOnClickListener {
 
+//               calculateHeighjtOfViewPager(tab.position)
 
                 when (it.tag) {
                     Constants.TYPE_IMAGE -> {
 //
 
-                        a!!.launch("image/*")
+//                        a!!.launch("image/*")
 
 
                     }
@@ -293,21 +313,38 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
 //                        generateViewDynamically(Constants.TYPE_TEXT,"yesss")
 
 
-                        createCustomTextDialog()
+//                        createCustomTextDialog()
 
                     }
 
                 }
-                binding.viewpager2.registerOnPageChangeCallback(object :
-                    ViewPager2.OnPageChangeCallback() {
-                    override fun onPageSelected(position: Int) {
-                        childFragmentManager.fragments.get(position).tag
-                        super.onPageSelected(position)
-                    }
-                })
+
 
             }
 
+            binding.viewpager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageScrolled(
+                    position: Int,
+                    positionOffset: Float,
+                    positionOffsetPixels: Int
+                ) {
+                    Log.d("positionnn0",position.toString())
+
+
+
+                    super.onPageScrolled(position, positionOffset, positionOffsetPixels)
+                }
+
+                override fun onPageSelected(position: Int) {
+                    Log.d("measuredd","okk")
+                    calculateHeighjtOfViewPager(position)
+                    super.onPageSelected(position)
+                }
+
+                override fun onPageScrollStateChanged(state: Int) {
+                    super.onPageScrollStateChanged(state)
+                }
+            })
 
 
             if (tabSize == 3) {
@@ -359,6 +396,35 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
         }.attach()
 
 
+    }
+
+    private fun  calculateHeighjtOfViewPager(position:Int) {
+
+        viewpagerFragmentList[position].view?.apply {
+            Log.d("heightwidth", "$width   $height")
+            val wMeasureSpec = makeMeasureSpec(
+                width,
+                View.MeasureSpec.EXACTLY
+            )
+            val hMeasureSpec = makeMeasureSpec(
+                0,
+                View.MeasureSpec.UNSPECIFIED
+            )
+            measure(wMeasureSpec, hMeasureSpec)
+            if (binding.viewpager2.layoutParams.height != height) {
+                binding.viewpager2.layoutParams =
+                    (binding.viewpager2.layoutParams as ConstraintLayout.LayoutParams)
+                        .also { lp ->
+                            lp.height = this.measuredHeight
+                            lp.width = this.measuredWidth
+                        }
+            }
+            Log.d("measureddheightt",measuredHeight.toString())
+
+
+
+
+        }
     }
 
     private fun createCustomTextDialog() {

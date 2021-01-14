@@ -24,27 +24,11 @@ class TextTabFragment : Fragment(R.layout.fragment_text_tab) {
         var adapter = CustomTextTabRecyclerAdapter()
         binding.customTextRecyclerview.apply {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-            this.adapter =adapter
+            this.adapter = adapter
         }
 
-//        binding.root.viewTreeObserver.addOnGlobalLayoutListener {
-//            Log.d("width111", binding.constraint.width.toString())
-//            binding.root.apply {
-//
-//                layoutParams = (layoutParams as FrameLayout.LayoutParams).apply {
-//                    var dp = 16
-//
-//                    setMargins(
-//                        convertDpToPixels(dp),
-//                        convertDpToPixels(dp),
-//                        convertDpToPixels(dp),
-//                        convertDpToPixels(dp)
-//                    )
-//
-//
-//                }
-//            }
-//        }
+
+
     }
 
     private fun convertDpToPixels(dp: Int): Int {

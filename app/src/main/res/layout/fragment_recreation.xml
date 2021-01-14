@@ -72,7 +72,8 @@
                 app:layout_constraintBottom_toTopOf="@id/tablayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.89">
 
 
                 <ImageView
@@ -117,7 +118,8 @@
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:background="@color/red"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/tablayout"
