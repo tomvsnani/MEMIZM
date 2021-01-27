@@ -4,4 +4,47 @@
     <string name="closeDrawer">close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="savedTemplateToolbar">Saved Templates</string>
+    <string name="MyDownloads">My Downloads</string>
+    <string name="MyFavourites">My Favourites</string>
+    <string name="MyCreations">My Creations</string>
+    <string name="fonts_provider">com.google.android.gms.fonts</string>
+    <string name="fonts_package">com.google.android.gms</string>
+
+    <string-array name="colorlist">
+        <item>red</item>
+        <item>blue</item>
+        <item>green</item>
+        <item>black</item>
+        <item>white</item>
+        <item>gray</item>
+        <item>cyan</item>
+        <item>magenta</item>
+        <item>yellow</item>
+        <item>lightgray</item>
+        <item>darkgray</item>
+        <item>grey</item>
+        <item>lightgrey</item>
+        <item>darkgrey</item>
+        <item>aqua</item>
+        <item>fuchsia</item>
+        <item>lime</item>
+        <item>maroon</item>
+        <item>navy</item>
+        <item>olive</item>
+        <item>purple</item>
+        <item>silver</item>
+        <item>teal</item>
+    </string-array>
+
+
+    <array name="fontFamilies">
+
+
+        <item>@font/actor</item>
+        <item>@font/aladin</item>
+
+    </array>
+
+
 </resources>

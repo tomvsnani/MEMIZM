@@ -24,8 +24,16 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_visibility_off_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_add_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_image_24.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_image_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_add_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_visibility_24.png.flat",
@@ -48,6 +56,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_add_alert_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_filter_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_filter_alt_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_add_box_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_add_box_24.png"
     },
@@ -60,12 +72,24 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_format_align_left_24.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\font_aladin.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\font\\aladin.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_add_alert_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_add_alert_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_custom_size___1.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_custom_size___1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_camera_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_camera_alt_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_camera_alt_24.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_camera_alt_24.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
@@ -76,6 +100,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_main.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_add_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_categories_row_layout.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\categories_row_layout.xml"
     },
@@ -84,8 +112,24 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_psychology_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_different_template_shapes.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_different_template_shapes.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_text_fields_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_text_fields_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_favorite_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_favorite_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_format_bold_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_format_bold_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_format_align_right_24.png.flat",
@@ -144,6 +188,14 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_share_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_format_bold_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_format_bold_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_format_bold_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_format_bold_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -152,8 +204,20 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_add_box_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_favorite_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_favorite_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\menu_toolbar_menu.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\menu\\toolbar_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_add_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_filter_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_filter_alt_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_add_box_24.png.flat",
@@ -162,6 +226,34 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_format_align_right_24.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_format_align_right_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_delete_outline_24.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_delete_outline_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_format_italic_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_format_italic_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_format_italic_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_format_italic_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_format_bold_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_format_bold_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_camera_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_camera_alt_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_delete_outline_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_delete_outline_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_save_24.png.flat",
@@ -182,6 +274,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_format_align_left_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_format_align_left_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_delete_outline_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_delete_outline_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_settings_24.png.flat",
@@ -228,6 +324,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_emoji_emotions_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_camera_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_camera_alt_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_edit.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_edit.xml"
     },
@@ -260,6 +360,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_save_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_downloads.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_my_downloads.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_content_recycler_row_layout.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\main_content_recycler_row_layout.xml"
     },
@@ -282,6 +386,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_share_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_format_italic_24.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_format_italic_24.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_format_align_center_24.png.flat",
@@ -312,6 +420,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_custom_size___1.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_favorite_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_favorite_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_logo_tab.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_logo_tab.xml"
     },
@@ -322,6 +434,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_tab_view_layout.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\custom_tab_view_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_delete_outline_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_delete_outline_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_search_24.png.flat",
@@ -360,6 +476,14 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_text_color_row_layout.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\text_color_row_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_my_templates_row_layout.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\my_templates_row_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
@@ -380,8 +504,16 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\notification_icon.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_camera_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_camera_alt_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_custom_size___1.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_custom_size___1.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_text_color_alert_dialog_recycler_llayout.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\text_color_alert_dialog_recycler_llayout.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable_venytemp.png.flat",
@@ -394,6 +526,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_add_alert_24.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_add_alert_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_saved_template.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_saved_template.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_psychology_24.png.flat",
@@ -416,6 +552,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_format_align_right_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\font_amita.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\font\\amita.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_arrow_back_ios_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_arrow_back_ios_24.png"
     },
@@ -426,6 +566,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_view_menu.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\menu\\bottom_nav_view_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_search.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_arrow_downward_24.png.flat",
@@ -456,12 +600,12 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_account_circle_24.png"
     },
     {
-        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_black_download_icon.png.flat",
-        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\black_download_icon.png"
-    },
-    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_format_align_center_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_format_align_center_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_black_download_icon.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\black_download_icon.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_format_align_center_24.png.flat",
@@ -478,6 +622,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_image_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_image_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_filter_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_filter_alt_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_account_circle_24.png.flat",
@@ -500,6 +648,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\drawable\\def.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_camera_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_camera_alt_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_settings_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_settings_24.png"
     },
@@ -520,8 +672,16 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_save_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_delete_outline_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_delete_outline_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_share_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_share_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_delete_outline_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_delete_outline_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_format_color_text_24.png.flat",
@@ -564,6 +724,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_share_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_favorite_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_favorite_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable_chimney.jpg.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\drawable\\chimney.jpg"
     },
@@ -572,8 +736,20 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_format_align_right.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_favourites.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_my_favourites.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_filter_alt_24.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_filter_alt_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_favorite_border_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_favorite_border_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_filter_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_filter_alt_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_edit.png.flat",
@@ -604,6 +780,14 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_format_align_center_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_format_bold_24.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_format_bold_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_add_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -616,8 +800,24 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_format_italic_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_format_italic_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_delete_outline_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_delete_outline_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_format_align_right.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_format_align_right.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_format_bold_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_format_bold_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_format_italic_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_format_italic_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_search_24.png.flat",
@@ -626,6 +826,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_format_align_left_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_format_align_left_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_format_italic_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_format_italic_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_psychology_24.png.flat",
@@ -654,6 +858,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_favorite_border_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_favorite_border_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_templates.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_my_templates.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_arrow_downward_24.png.flat",
@@ -696,6 +904,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_visibility_off_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_filter_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_filter_alt_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_format_align_right.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_format_align_right.png"
     },
@@ -704,12 +916,28 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_search_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_camera_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_camera_alt_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_add_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_add_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_gallary_tab.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_gallary_tab.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_text_fields_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_text_fields_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_format_italic_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_format_italic_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_favorite_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_favorite_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_format_align_left_24.png.flat",
@@ -748,8 +976,16 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_format_align_right.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_format_bold_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_format_bold_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_visibility_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_visibility_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_favorite_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_favorite_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_arrow_back_ios_24.png.flat",
@@ -780,8 +1016,16 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_text_fields_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable_image_transparent_background.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\drawable\\image_transparent_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_visibility_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_visibility_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\font_actor.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\font\\actor.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_visibility_off_24.png.flat",
@@ -794,6 +1038,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_text_fields_24.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_text_fields_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_favorite_24.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_favorite_24.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_custom_size___1.png.flat",
@@ -820,6 +1068,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_add_alert_24.png"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_filter_alt_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_filter_alt_24.png"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_shape_background.xml.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\drawable\\custom_shape_background.xml"
     },
@@ -828,12 +1080,12 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_search_24.png"
     },
     {
-        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_image_24.png.flat",
-        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_image_24.png"
-    },
-    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_visibility_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_visibility_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_image_24.png.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_image_24.png"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_format_align_right.png.flat",
@@ -856,6 +1108,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\black_download_icon.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\font_arapey.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\font\\arapey.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_arrow_back_ios_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_arrow_back_ios_24.png"
     },
@@ -870,6 +1126,10 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_image_24.png.flat",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_image_24.png"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\layout_image_fragment_image_row_layout.xml.flat",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\image_fragment_image_row_layout.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\res\\merged\\debug\\drawable_venkyimg.png.flat",

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecreationFragment">
+    tools:context=".Fragments.RecreationFragment">
 
 
     <com.google.android.material.button.MaterialButton
@@ -50,7 +50,7 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/downloadbutton">-->
 
-    <com.example.memeizm.CustomScrollView
+    <com.analogit.memeizm.CustomScrollView
         android:id="@+id/nestedScroll"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -65,32 +65,45 @@
             android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-
                 android:id="@+id/constrait"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/black"
+
+                app:layout_constrainedHeight="true"
                 app:layout_constraintBottom_toTopOf="@id/tablayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.89">
+                app:layout_constraintTop_toTopOf="parent">
 
 
                 <ImageView
                     android:id="@+id/mainEditableImageView"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-
-
                     android:text="@string/app_name"
-                    android:textColor="@color/red"
-
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.83" />
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/mainEditableIageView"-->
+                <!--                    android:layout_width="300dp"-->
+                <!--                    android:layout_height="300dp"-->
+                <!--                   android:layout_marginTop="40dp"-->
+                <!--                    android:adjustViewBounds="true"-->
+                <!--                    android:src="@drawable/img"-->
+
+                <!--                    android:text="@string/app_name"-->
+                <!--                    android:textColor="@color/red"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!--    </FrameLayout>-->
 
@@ -111,6 +124,7 @@
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tablayout"
                 android:layout_width="0dp"
+
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -119,12 +133,12 @@
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager2"
                 android:layout_width="0dp"
-                android:background="@color/red"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/tablayout"
                 app:layout_constraintStart_toStartOf="@+id/tablayout"
-                app:layout_constraintTop_toBottomOf="@+id/tablayout" />
+                app:layout_constraintTop_toBottomOf="@+id/tablayout"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.example.memeizm.CustomScrollView>
+    </com.analogit.memeizm.CustomScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

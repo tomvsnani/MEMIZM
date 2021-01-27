@@ -1,4 +1,4 @@
-com.example.memeizm
+com.analogit.memeizm
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -52,6 +52,12 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array colorlist
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array fontFamilies
+array preloaded_fonts
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -102,7 +108,6 @@ attr applyMotionScene
 attr arcMode
 attr arrowHeadLength
 attr arrowShaftLength
-attr assetName
 attr attributeName
 attr autoCompleteTextViewStyle
 attr autoSizeMaxTextSize
@@ -637,7 +642,6 @@ attr paddingLeftSystemWindowInsets
 attr paddingRightSystemWindowInsets
 attr paddingStart
 attr paddingTopNoTitle
-attr panEnabled
 attr panelBackground
 attr panelMenuListTheme
 attr panelMenuListWidth
@@ -671,7 +675,6 @@ attr progressBarPadding
 attr progressBarStyle
 attr queryBackground
 attr queryHint
-attr quickScaleEnabled
 attr radioButtonStyle
 attr rangeFillColor
 attr ratingBarStyle
@@ -722,7 +725,6 @@ attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
 attr splitTrack
-attr src
 attr srcCompat
 attr stackFromEnd
 attr staggered
@@ -831,7 +833,6 @@ attr tickColorInactive
 attr tickMark
 attr tickMarkTint
 attr tickMarkTintMode
-attr tileBackgroundColor
 attr tint
 attr tintMode
 attr title
@@ -873,9 +874,7 @@ attr triggerSlack
 attr ttcIndex
 attr useCompatPadding
 attr useMaterialThemeColors
-attr use_legacy_parser
 attr values
-attr vector_src
 attr verticalOffset
 attr viewInflaterClass
 attr visibilityMode
@@ -899,7 +898,6 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
-attr zoomEnabled
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
@@ -1000,6 +998,7 @@ color foreground_material_light
 color graywhite
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lightBlack
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1574,18 +1573,25 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable fill_custom_edges_solid_color
 drawable ic_baseline_account_circle_24
+drawable ic_baseline_add_24
 drawable ic_baseline_add_alert_24
 drawable ic_baseline_add_box_24
 drawable ic_baseline_arrow_back_ios_24
 drawable ic_baseline_arrow_downward_24
+drawable ic_baseline_camera_alt_24
+drawable ic_baseline_delete_outline_24
 drawable ic_baseline_edit
 drawable ic_baseline_emoji_emotions_24
+drawable ic_baseline_favorite_24
 drawable ic_baseline_favorite_border_24
+drawable ic_baseline_filter_alt_24
 drawable ic_baseline_format_align_center_24
 drawable ic_baseline_format_align_left_24
 drawable ic_baseline_format_align_right
 drawable ic_baseline_format_align_right_24
+drawable ic_baseline_format_bold_24
 drawable ic_baseline_format_color_text_24
+drawable ic_baseline_format_italic_24
 drawable ic_baseline_home_24
 drawable ic_baseline_image_24
 drawable ic_baseline_psychology_24
@@ -1603,6 +1609,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable image_transparent_background
 drawable img
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1638,6 +1645,10 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable venkyimg
 drawable venytemp
+font actor
+font aladin
+font amita
+font arapey
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1707,6 +1718,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addTextImageView
 id alertTitle
 id aligned
 id all
@@ -1727,6 +1739,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id blocking
+id boldTextImageView
 id bottom
 id bottomNavigationView
 id bottom_left
@@ -1734,10 +1747,12 @@ id bottom_right
 id bounce
 id buttonPanel
 id cache_measures
+id cameraImageView
+id cameraImageViewWrapper
 id cancel_action
 id cancel_button
-id card_image1
-id card_image2
+id card_image
+id cardwrap
 id cartitemNumberIndicatormenu
 id cartmenuitem
 id category_row_textview
@@ -1758,8 +1773,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
-id collectionName1
-id collectionName2
+id collectionName
 id confirm_button
 id constraint
 id constraintLayout
@@ -1795,6 +1809,7 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id doneButton
+id downloadContentRecycler
 id downloadbutton
 id dragDown
 id dragEnd
@@ -1808,6 +1823,7 @@ id easeIn
 id easeInOut
 id easeOut
 id editText
+id editTextWrapper
 id edit_query
 id end
 id end_padder
@@ -1822,14 +1838,19 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filterimageview
 id fitToContents
 id fixed
 id flip
 id floating
+id fontChangeImageView
 id forever
 id fragment_container_view_tag
+id gallaryImageView
+id gallaryImageWrapper
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -1842,11 +1863,11 @@ id homeAsUp
 id honorRequest
 id icon
 id icon_group
+id iconimageview
 id ifRoom
 id ignore
 id ignoreRequest
 id image
-id image1
 id image2
 id image3
 id image4
@@ -1855,6 +1876,7 @@ id info
 id invisible
 id isViewActiveImageView
 id italic
+id italicTextImageView
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -1873,6 +1895,7 @@ id mainContentRecycler
 id mainEditableImageView
 id maintoolbar
 id masked
+id materialCardView
 id media_actions
 id message
 id middle
@@ -1906,6 +1929,8 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id myCreationsContentRecycler
+id mytemplates_recyclerview
 id navigation_header_container
 id navigationview
 id nestedScroll
@@ -1937,6 +1962,8 @@ id postLayout
 id profile
 id progress_circular
 id progress_horizontal
+id progressbar
+id progressbarcard
 id radio
 id ratio
 id recreateButton
@@ -1951,6 +1978,7 @@ id save
 id saveImageView
 id save_non_transition_alpha
 id save_overlay_view
+id savedContentRecycler
 id sawtooth
 id scale
 id screen
@@ -1960,6 +1988,10 @@ id scrollIndicatorUp
 id scrollView
 id scrollable
 id search
+id searchCategoriesEditText
+id searchCategoryRecycler
+id searchEditText
+id searchRcyclerRecycler
 id search_badge
 id search_bar
 id search_button
@@ -2024,12 +2056,15 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
+id textColorImageView
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id text_input_end_icon
 id text_input_start_icon
+id textcolorChnageButton
+id textcolorRecycler
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2054,6 +2089,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id trendingImagesRecycerView
+id trending_images_ImageView
 id triangle
 id unchecked
 id uniform
@@ -2155,13 +2192,20 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_different_template_shapes
 layout fragment_gallary_tab
 layout fragment_image
 layout fragment_logo_tab
 layout fragment_main
 layout fragment_my_creations
+layout fragment_my_downloads
+layout fragment_my_favourites
+layout fragment_my_templates
 layout fragment_recreation
+layout fragment_saved_template
+layout fragment_search
 layout fragment_text_tab
+layout image_fragment_image_row_layout
 layout main_content_recycler_row_layout
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
@@ -2191,6 +2235,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout my_templates_row_layout
 layout notification_action
 layout notification_action_tombstone
 layout notification_icon
@@ -2220,6 +2265,8 @@ layout test_toolbar
 layout test_toolbar_custom_background
 layout test_toolbar_elevation
 layout test_toolbar_surface
+layout text_color_alert_dialog_recycler_llayout
+layout text_color_row_layout
 layout text_view_with_line_height_from_appearance
 layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
@@ -2230,6 +2277,9 @@ menu toolbar_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string MyCreations
+string MyDownloads
+string MyFavourites
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2270,6 +2320,8 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fonts_package
+string fonts_provider
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -2317,6 +2369,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string savedTemplateToolbar
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat
@@ -3125,7 +3178,6 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
-styleable SubsamplingScaleImageView assetName panEnabled quickScaleEnabled src tileBackgroundColor zoomEnabled
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text
@@ -3139,11 +3191,11 @@ styleable Tooltip android_textAppearance android_padding android_layout_margin a
 styleable Transform android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation
 styleable Transition android_id autoTransition constraintSetEnd constraintSetStart duration layoutDuringTransition motionInterpolator pathMotionArc staggered transitionDisable transitionFlags
 styleable Variant constraints region_heightLessThan region_heightMoreThan region_widthLessThan region_widthMoreThan
-styleable VectorMasterView use_legacy_parser vector_src
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

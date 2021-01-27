@@ -1,6 +1,11 @@
 plugins {
+
+
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+
+
 }
 
 android {
@@ -10,7 +15,13 @@ android {
         viewBinding true
     }
     defaultConfig {
-        applicationId "com.example.memeizm"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.incremental":"true"]
+            }
+        }
+        applicationId "com.analogit.memeizm"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -46,13 +57,23 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
-    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
     implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
-    implementation   'com.dinuscxj:multitouchgesturedetector:1.0.0'
-    implementation 'com.github.devsideal:VectorChildFinder:1.0.0'
-    implementation 'com.sdsmdg.harjot:vectormaster:1.1.3'
+    implementation 'com.dinuscxj:multitouchgesturedetector:1.0.0'
+    implementation "com.squareup.retrofit2:converter-gson"
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation "androidx.activity:activity-ktx:1.2.0-rc01"
     implementation "androidx.fragment:fragment-ktx:1.3.0-rc01"
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    def room_version = "2.2.6"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
 
 }

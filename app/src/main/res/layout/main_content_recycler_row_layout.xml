@@ -11,8 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:minHeight="400dp"
-        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -50,10 +49,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:src="@drawable/ic_baseline_favorite_border_24"
         app:layout_constraintBottom_toBottomOf="@+id/shareImageView"
         app:layout_constraintStart_toEndOf="@+id/shareImageView"
-        app:layout_constraintTop_toTopOf="@+id/shareImageView"
-        android:src="@drawable/ic_baseline_favorite_border_24" />
+        app:layout_constraintTop_toTopOf="@+id/shareImageView" />
 
     <ImageView
         android:id="@+id/saveImageView"

@@ -1,77 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".MyCreationsFragment">
-
-    <!--  <androidx.recyclerview.widget.RecyclerView-->
-    <!--      android:layout_width="match_parent"-->
-    <!--      android:layout_height="wrap_content"-->
-    <!--      android:id="@+id/mycollectionsRecycler"/>-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="8dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MainFragment">
 
 
-        <ImageView
-            android:id="@+id/card_image1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myCreationsContentRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            android:background="@drawable/corner_radius_stroke_drawable"
-            android:src="@drawable/chimney" />
-
-
-        <TextView
-            android:id="@+id/collectionName1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_edit"
-            android:gravity="center"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:text="My Creations"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-
-        <ImageView
-            android:id="@+id/card_image2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/corner_radius_stroke_drawable"
-            android:src="@drawable/chimney" />
-
-
-        <TextView
-            android:id="@+id/collectionName2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/black_download_icon"
-            android:gravity="center"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:text="My Downloads"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

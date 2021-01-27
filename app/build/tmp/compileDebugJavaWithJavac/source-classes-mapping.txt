@@ -1,32 +1,66 @@
-com/example/memeizm/databinding/FragmentImageBinding.java
- com.example.memeizm.databinding.FragmentImageBinding
-com/example/memeizm/databinding/CustomViewAndroidBinding.java
- com.example.memeizm.databinding.CustomViewAndroidBinding
-com/example/memeizm/BuildConfig.java
- com.example.memeizm.BuildConfig
-com/example/memeizm/databinding/ActivityMainBinding.java
- com.example.memeizm.databinding.ActivityMainBinding
-com/example/memeizm/databinding/NotificationIconBinding.java
- com.example.memeizm.databinding.NotificationIconBinding
-com/example/memeizm/databinding/FragmentMyCreationsBinding.java
- com.example.memeizm.databinding.FragmentMyCreationsBinding
-com/example/memeizm/databinding/CategoriesRowLayoutBinding.java
- com.example.memeizm.databinding.CategoriesRowLayoutBinding
-com/example/memeizm/databinding/CustomTabViewLayoutBinding.java
- com.example.memeizm.databinding.CustomTabViewLayoutBinding
-com/example/memeizm/databinding/FragmentMainBinding.java
- com.example.memeizm.databinding.FragmentMainBinding
-com/example/memeizm/databinding/FragmentRecreationBinding.java
- com.example.memeizm.databinding.FragmentRecreationBinding
-com/example/memeizm/databinding/FragmentTextTabBinding.java
- com.example.memeizm.databinding.FragmentTextTabBinding
-com/example/memeizm/databinding/FragmentLogoTabBinding.java
- com.example.memeizm.databinding.FragmentLogoTabBinding
-com/example/memeizm/databinding/MainContentRecyclerRowLayoutBinding.java
- com.example.memeizm.databinding.MainContentRecyclerRowLayoutBinding
-com/example/memeizm/databinding/FragmentGallaryTabBinding.java
- com.example.memeizm.databinding.FragmentGallaryTabBinding
-com/example/memeizm/databinding/CustomAlertDialogBinding.java
- com.example.memeizm.databinding.CustomAlertDialogBinding
-com/example/memeizm/databinding/CustomTextTabRowLayoutBinding.java
- com.example.memeizm.databinding.CustomTextTabRowLayoutBinding
+com/analogit/memeizm/databinding/FragmentMyTemplatesBinding.java
+ com.analogit.memeizm.databinding.FragmentMyTemplatesBinding
+com/analogit/memeizm/databinding/FragmentMainBinding.java
+ com.analogit.memeizm.databinding.FragmentMainBinding
+com/analogit/memeizm/databinding/ActivityMainBinding.java
+ com.analogit.memeizm.databinding.ActivityMainBinding
+com/analogit/memeizm/databinding/CustomTextTabRowLayoutBinding.java
+ com.analogit.memeizm.databinding.CustomTextTabRowLayoutBinding
+com/analogit/memeizm/databinding/TextColorRowLayoutBinding.java
+ com.analogit.memeizm.databinding.TextColorRowLayoutBinding
+com/analogit/memeizm/databinding/FragmentRecreationBinding.java
+ com.analogit.memeizm.databinding.FragmentRecreationBinding
+com/analogit/memeizm/databinding/FragmentImageBinding.java
+ com.analogit.memeizm.databinding.FragmentImageBinding
+com/analogit/memeizm/databinding/MainContentRecyclerRowLayoutBinding.java
+ com.analogit.memeizm.databinding.MainContentRecyclerRowLayoutBinding
+com/analogit/memeizm/databinding/FragmentMyDownloadsBinding.java
+ com.analogit.memeizm.databinding.FragmentMyDownloadsBinding
+com/analogit/memeizm/databinding/CategoriesRowLayoutBinding.java
+ com.analogit.memeizm.databinding.CategoriesRowLayoutBinding
+com/analogit/memeizm/databinding/FragmentMyCreationsBinding.java
+ com.analogit.memeizm.databinding.FragmentMyCreationsBinding
+com/analogit/memeizm/databinding/CustomAlertDialogBinding.java
+ com.analogit.memeizm.databinding.CustomAlertDialogBinding
+com/analogit/memeizm/databinding/MyTemplatesRowLayoutBinding.java
+ com.analogit.memeizm.databinding.MyTemplatesRowLayoutBinding
+com/analogit/memeizm/databinding/FragmentDifferentTemplateShapesBinding.java
+ com.analogit.memeizm.databinding.FragmentDifferentTemplateShapesBinding
+com/analogit/memeizm/Databases/MyDatabase_Impl.java
+ com.analogit.memeizm.Databases.MyDatabase_Impl
+ com.analogit.memeizm.Databases.MyDatabase_Impl$1
+com/analogit/memeizm/databinding/CustomTabViewLayoutBinding.java
+ com.analogit.memeizm.databinding.CustomTabViewLayoutBinding
+com/analogit/memeizm/databinding/NotificationIconBinding.java
+ com.analogit.memeizm.databinding.NotificationIconBinding
+com/analogit/memeizm/databinding/FragmentMyFavouritesBinding.java
+ com.analogit.memeizm.databinding.FragmentMyFavouritesBinding
+com/analogit/memeizm/databinding/TextColorAlertDialogRecyclerLlayoutBinding.java
+ com.analogit.memeizm.databinding.TextColorAlertDialogRecyclerLlayoutBinding
+com/analogit/memeizm/databinding/FragmentLogoTabBinding.java
+ com.analogit.memeizm.databinding.FragmentLogoTabBinding
+com/analogit/memeizm/databinding/FragmentSavedTemplateBinding.java
+ com.analogit.memeizm.databinding.FragmentSavedTemplateBinding
+com/analogit/memeizm/databinding/FragmentGallaryTabBinding.java
+ com.analogit.memeizm.databinding.FragmentGallaryTabBinding
+com/analogit/memeizm/databinding/FragmentTextTabBinding.java
+ com.analogit.memeizm.databinding.FragmentTextTabBinding
+com/analogit/memeizm/BuildConfig.java
+ com.analogit.memeizm.BuildConfig
+com/analogit/memeizm/databinding/ImageFragmentImageRowLayoutBinding.java
+ com.analogit.memeizm.databinding.ImageFragmentImageRowLayoutBinding
+com/analogit/memeizm/databinding/CustomViewAndroidBinding.java
+ com.analogit.memeizm.databinding.CustomViewAndroidBinding
+com/analogit/memeizm/Databases/MainEntityDao_Impl.java
+ com.analogit.memeizm.Databases.MainEntityDao_Impl
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$1
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$2
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$3
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$4
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$5
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$6
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$7
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$8
+ com.analogit.memeizm.Databases.MainEntityDao_Impl$9
+com/analogit/memeizm/databinding/FragmentSearchBinding.java
+ com.analogit.memeizm.databinding.FragmentSearchBinding
