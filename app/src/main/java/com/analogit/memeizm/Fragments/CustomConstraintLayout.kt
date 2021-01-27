@@ -74,7 +74,7 @@ class CustomConstraintLayout @JvmOverloads constructor(
     }
 
     override fun onInterceptTouchEvent(event: MotionEvent?): Boolean {
-        return numberOfDynamicViewsCount == 2
+        return numberOfDynamicViewsCount == 2.toInt()
         
     }
 
