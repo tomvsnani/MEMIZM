@@ -34,14 +34,15 @@ class SearchFragmentMainContentAdapter(var activity: Activity?) :
                         isInProgressTemplate = true
                     })
 
+                    if (this@MainContentViewHolder.binding.imageView.height > 0 && this@MainContentViewHolder.binding.imageView.width > 0) {
+                        editingImageBitmap =
+                            this@MainContentViewHolder.binding.imageView.drawToBitmap()
 
-                    editingImageBitmap =
-                        this@MainContentViewHolder.binding.imageView.drawToBitmap()
-
-                    modelThatIsBeingEdited = currentList[adapterPosition].copy()
+                        modelThatIsBeingEdited = currentList[adapterPosition].copy()
 
 
-                    loadFragment(RecreationFragment())
+                        loadFragment(RecreationFragment())
+                    }
 
                 }
             }
@@ -82,7 +83,7 @@ class SearchFragmentMainContentAdapter(var activity: Activity?) :
 
     override fun onBindViewHolder(holder: MainContentViewHolder, position: Int) {
         var model = currentList[position]
-        Glide.with(holder.itemView.context).load(Constants.IMAGE_URL + model.image)
+        Glide.with(holder.itemView.context).load(Constants.IMAGE_URL + model.images_path)
             .into(holder.binding.imageView)
 
 

@@ -39,7 +39,7 @@ class SearchFragmentCategoryAdapter :
     override fun onBindViewHolder(holder: MainCategoryViewHolder, position: Int) {
         var model = currentList[position]
 
-        holder.binding.categoryRowTextview.text = model.categoryName
+        holder.binding.categoryRowTextview.text = model.collection_name
         if (selectedPosition==position) {
             holder.binding.categoryRowTextview.apply {
                 setBackgroundColor(Color.BLACK)

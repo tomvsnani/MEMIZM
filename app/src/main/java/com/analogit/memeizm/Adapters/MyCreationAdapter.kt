@@ -66,7 +66,7 @@ class MyCreationAdapter(var activity: Activity?) :
         var model = currentList[position]
 
 
-        Glide.with(holder.itemView.context).load(Constants.IMAGE_URL + model.image)
+        Glide.with(holder.itemView.context).load(Constants.IMAGE_URL + model.images_path)
             .into(holder.binding.imageView)
 
 

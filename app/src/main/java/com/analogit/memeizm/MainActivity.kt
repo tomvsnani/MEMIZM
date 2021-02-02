@@ -3,11 +3,17 @@ package com.analogit.memeizm
 import android.R.attr.*
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -27,7 +33,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.File
+import java.io.FileOutputStream
 import kotlin.coroutines.coroutineContext
+import kotlin.properties.Delegates
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,9 +45,25 @@ class MainActivity : AppCompatActivity() {
     lateinit var retrofitInterface: RetrofitInterface
     public var editingImageBitmap: Bitmap? = null
     public var modelThatIsBeingEdited: MainContentModel? = null
-    lateinit var databasee: MyDatabase
-    lateinit var textChangeCallback:(TextPropertiesModelClass)->Unit
-    lateinit var imageChangeCallBack:(String)->Unit
+
+    var g = Delegates.observable(0, { property, oldValue, newValue ->
+        Log.d("propertyyy", property.toString() + "  " + oldValue + "  " + newValue)
+    })
+    var s by g
+
+    var h by g
+    lateinit var textChangeCallback: (TextPropertiesModelClass) -> Unit
+    lateinit var imageChangeCallBack: (String) -> Unit
+    var differentTemplateShapesList = listOf<Int>(
+        R.layout.customizable_shape_1,
+        R.layout.customizable_shape_2,
+        R.layout.customizable_shape_3,
+        R.layout.customizable_shape_4,
+        R.layout.customizable_shape_5,
+        R.layout.customizable_shape_6,
+        R.layout.customzable_shape_7,
+        R.layout.customizable_shape_8
+    )
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,10 +72,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setUpToolBar()
+        h=10
+
 
         loadFragment(MainFragment(), "home", true)
 
         buildRetrofitInterface()
+
+
 
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
@@ -67,9 +96,13 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(SearchFragment())
                 }
                 R.id.save -> {
+                    h++
                     loadFragment(SavedTemplateFragment())
+
+
                 }
-                R.id.add->{
+                R.id.add -> {
+                    s++
                     loadFragment(DifferentTemplateShapesFragment())
                 }
 
@@ -79,6 +112,14 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    fun makeProgressVisible(){
+        binding.progressbarcard.visibility=View.VISIBLE
+    }
+
+    fun makeProgressInvisible(){
+        binding.progressbarcard.visibility=View.GONE
     }
 
     private fun buildRetrofit(): Retrofit {
@@ -92,6 +133,11 @@ class MainActivity : AppCompatActivity() {
     private fun buildRetrofitInterface(): RetrofitInterface {
         retrofitInterface = buildRetrofit().create(RetrofitInterface::class.java)
         return retrofitInterface
+    }
+
+
+    fun showToast(str:String){
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
     }
 
 
@@ -201,25 +247,25 @@ class MainActivity : AppCompatActivity() {
 
                 if (i != (-1).toLong()) {
 
-                    showToast("Inserted ")
+                    showToast1("Inserted ")
 
                 } else {
 
 
                     if (update(mainContentModel) > 0)
 
-                        showToast("updated ")
+                        showToast1("updated ")
 
                 }
             } catch (e: Exception) {
-                showToast(e.toString())
+                showToast1(e.toString())
             }
 
 
         }
     }
 
-    private suspend fun showToast(s: String) {
+    private suspend fun showToast1(s: String) {
         Dispatchers.Main.dispatch(coroutineContext) {
             Toast.makeText(this@MainActivity, s, Toast.LENGTH_SHORT).show()
         }
@@ -279,7 +325,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun mainEntityDao(): MainEntityDao {
 
-      return  MyDatabase.getInstance(this).dao
+        return MyDatabase.getInstance(this).dao
     }
 
 
@@ -289,6 +335,60 @@ class MainActivity : AppCompatActivity() {
         binding.progressbarcard.setOnTouchListener { v, event ->
             return@setOnTouchListener true
         }
+    }
+
+    fun View.saveBitmapToMemory() {
+        var bitmap = convertToBitmapWithBg()
+        try {
+
+
+            var outputStream = File.createTempFile(
+                "okkk",
+                "yess" + ".png",
+
+                context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+            ).let {
+
+                FileOutputStream(it)
+            }
+
+            if (bitmap?.compress(
+                    Bitmap.CompressFormat.PNG,
+                    100,
+                    outputStream
+                )!!
+            ) Toast.makeText(context, "Successfully Saved the Image to storage", Toast.LENGTH_LONG)
+                .show()
+            else
+                Toast.makeText(
+                    context,
+                    "Sorry could not save the image",
+                    Toast.LENGTH_SHORT
+                )
+                    .show()
+
+        } catch (e: java.lang.Exception) {
+            Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun View.convertToBitmapWithBg(): Bitmap? {
+
+        var bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        var canvas = Canvas(bitmap)
+        if (background != null && background is BitmapDrawable)
+            canvas.drawBitmap(
+                (background as BitmapDrawable).bitmap,
+                0f,
+                0f,
+                null
+            )
+        else if (background != null && background is ColorDrawable)
+            canvas.drawColor((background as ColorDrawable).color)
+        else
+            setBackgroundColor(Color.WHITE)
+        draw(canvas)
+        return bitmap
     }
 
 

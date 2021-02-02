@@ -2,10 +2,18 @@ com/analogit/memeizm/databinding/FragmentMyTemplatesBinding.java
  com.analogit.memeizm.databinding.FragmentMyTemplatesBinding
 com/analogit/memeizm/databinding/FragmentMainBinding.java
  com.analogit.memeizm.databinding.FragmentMainBinding
+com/analogit/memeizm/databinding/DifferentShapesTemplatesRowLayoutBinding.java
+ com.analogit.memeizm.databinding.DifferentShapesTemplatesRowLayoutBinding
+com/analogit/memeizm/databinding/CustomizableShape3Binding.java
+ com.analogit.memeizm.databinding.CustomizableShape3Binding
 com/analogit/memeizm/databinding/ActivityMainBinding.java
  com.analogit.memeizm.databinding.ActivityMainBinding
 com/analogit/memeizm/databinding/CustomTextTabRowLayoutBinding.java
  com.analogit.memeizm.databinding.CustomTextTabRowLayoutBinding
+com/analogit/memeizm/databinding/CustomizableShape1Binding.java
+ com.analogit.memeizm.databinding.CustomizableShape1Binding
+com/analogit/memeizm/databinding/CustomizableShape2Binding.java
+ com.analogit.memeizm.databinding.CustomizableShape2Binding
 com/analogit/memeizm/databinding/TextColorRowLayoutBinding.java
  com.analogit.memeizm.databinding.TextColorRowLayoutBinding
 com/analogit/memeizm/databinding/FragmentRecreationBinding.java
@@ -41,8 +49,14 @@ com/analogit/memeizm/databinding/FragmentLogoTabBinding.java
  com.analogit.memeizm.databinding.FragmentLogoTabBinding
 com/analogit/memeizm/databinding/FragmentSavedTemplateBinding.java
  com.analogit.memeizm.databinding.FragmentSavedTemplateBinding
+com/analogit/memeizm/databinding/CustomizableShape4Binding.java
+ com.analogit.memeizm.databinding.CustomizableShape4Binding
+com/analogit/memeizm/databinding/CustomizableShape8Binding.java
+ com.analogit.memeizm.databinding.CustomizableShape8Binding
 com/analogit/memeizm/databinding/FragmentGallaryTabBinding.java
  com.analogit.memeizm.databinding.FragmentGallaryTabBinding
+com/analogit/memeizm/databinding/CustomzableShape7Binding.java
+ com.analogit.memeizm.databinding.CustomzableShape7Binding
 com/analogit/memeizm/databinding/FragmentTextTabBinding.java
  com.analogit.memeizm.databinding.FragmentTextTabBinding
 com/analogit/memeizm/BuildConfig.java
@@ -62,5 +76,11 @@ com/analogit/memeizm/Databases/MainEntityDao_Impl.java
  com.analogit.memeizm.Databases.MainEntityDao_Impl$7
  com.analogit.memeizm.Databases.MainEntityDao_Impl$8
  com.analogit.memeizm.Databases.MainEntityDao_Impl$9
+com/analogit/memeizm/databinding/CustomizableShape5Binding.java
+ com.analogit.memeizm.databinding.CustomizableShape5Binding
+com/analogit/memeizm/databinding/CustomizableShape6Binding.java
+ com.analogit.memeizm.databinding.CustomizableShape6Binding
 com/analogit/memeizm/databinding/FragmentSearchBinding.java
  com.analogit.memeizm.databinding.FragmentSearchBinding
+com/analogit/memeizm/databinding/FragmentDifferentShapesRecreationBinding.java
+ com.analogit.memeizm.databinding.FragmentDifferentShapesRecreationBinding

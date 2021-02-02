@@ -10,9 +10,12 @@ import com.analogit.memeizm.Models.MainCategoryModelClass
 import com.analogit.memeizm.R
 import com.analogit.memeizm.databinding.CategoriesRowLayoutBinding
 
-class MainCategoryAdapter :
-    ListAdapter<MainCategoryModelClass, MainCategoryAdapter.MainCategoryViewHolder>(MainCategoryModelClass.diffUtil) {
+class MainCategoryAdapter(var collectionClickedCallback: (Int) -> Unit) :
+    ListAdapter<MainCategoryModelClass, MainCategoryAdapter.MainCategoryViewHolder>(
+        MainCategoryModelClass.diffUtil
+    ) {
     var selectedPosition = 0
+
     inner class MainCategoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var binding = CategoriesRowLayoutBinding.bind(view)
 
@@ -22,7 +25,7 @@ class MainCategoryAdapter :
                 view.context.resources.displayMetrics.widthPixels / (currentList.size)
 
             binding.categoryRowTextview.setOnClickListener {
-
+                collectionClickedCallback(currentList[adapterPosition].collection_id.toInt())
                 selectedPosition = adapterPosition
                 notifyDataSetChanged()
             }
@@ -38,8 +41,8 @@ class MainCategoryAdapter :
     override fun onBindViewHolder(holder: MainCategoryViewHolder, position: Int) {
         var model = currentList[position]
 
-        holder.binding.categoryRowTextview.text = model.categoryName
-        if (selectedPosition==position) {
+        holder.binding.categoryRowTextview.text = model.collection_name
+        if (selectedPosition == position) {
             holder.binding.categoryRowTextview.apply {
                 setBackgroundColor(Color.BLACK)
                 setTextColor(Color.WHITE)

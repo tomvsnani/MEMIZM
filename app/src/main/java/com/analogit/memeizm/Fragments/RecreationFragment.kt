@@ -130,8 +130,8 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
 
 
             val textView =
-                if (binding.constrait?.findViewById<TextView>(textpro.id.toInt()) == null) TextView(
-                    context
+                if (binding.constrait?.findViewWithTag<TextView>(textpro.id.toInt()) == null) TextView(
+                    binding.constrait.context
                 ).apply {
 
 
@@ -143,7 +143,7 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
 
 
                 }
-                else binding.constrait?.findViewById<TextView>(textpro.id.toInt()).apply {
+                else binding.constrait?.findViewWithTag<TextView>(textpro.id.toInt()).apply {
 
                     text = textpro.text
 
@@ -153,12 +153,12 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
 
                 }
 
-            if (textpro.id != textView.id.toString())
+            if (textView.tag==null || textpro.id != (textView.tag.toString()))
                 generateViewDynamically(
                     Constants.TYPE_TEXT,
                     textpro.text,
                     textView = textView.apply {
-                        id = textpro.id.toInt()
+                        tag = textpro.id.toInt()
                         setBackgroundColor(Color.BLUE)
                     }
                 )
@@ -182,170 +182,130 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
 
         binding.constrait.setOnTouchListener { v, event ->
             pointersCount = event.pointerCount
-            binding.nestedScroll.isEnableScrolling = isTransformLocked
+            binding.nestedScroll.isEnableScrolling = binding.constrait.isTransformLocked
 
             Log.d("eventtt", dynamicViewwithIdHashmap.size.toString())
-            transformViewsBasedOnTouch(event)
 
 
-            return@setOnTouchListener true
+
+            return@setOnTouchListener false
         }
     }
 
-    private fun transformViewsBasedOnTouch(event: MotionEvent) {
-        when (event.action and event.actionMasked) {
-
-            MotionEvent.ACTION_DOWN -> {
-
-
-                var rectF = Rect()
-                var j = 0;
-
-                for (i in dynamicViewwithIdHashmap.toSortedMap(reverseOrder())) {
-
-                    i.value.apply {
-                        getHitRect(rectF)
-                        if (rectF.contains(event.x.toInt(), event.y.toInt()))
-                            j = 1
-                    }
-                    if (j == 1) {
-                        isTransformLocked = false
-                        viewBeingTransformed = i.value
-                        break
-                    }
-                }
-                if (j == 0)
-                    isTransformLocked = true
-
-                if (viewBeingTransformed != null && !isTransformLocked) {
-                    event.apply {
-                        active_pointer_id = getPointerId(0)
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                            scalex = viewBeingTransformed!!.x - getRawX(
-                                findPointerIndex(active_pointer_id)
-                            )
-                            scaley = viewBeingTransformed!!.y - getRawY(
-                                findPointerIndex(active_pointer_id)
-                            )
-                        }
-
-
-                    }
-                    // detectWhereTouched(view1!!.width, view1!!.height, event, view1!!)
-                    if (!hashMapGesture.containsKey(viewBeingTransformed)
-
-                    ) {
-                        multiTouchGestureDetector = MultiTouchGestureDetector(
-                            context, setListener(viewBeingTransformed!!, 1.0f, 0f)
-                        )
-
-                        hashMapGesture[viewBeingTransformed!!] = multiTouchGestureDetector!!
-                    } else {
-                        multiTouchGestureDetector = hashMapGesture[viewBeingTransformed!!]
-                    }
-                }
-            }
-
-            MotionEvent.ACTION_MOVE -> {
-                Log.d("eventttookk", event.action.toString())
-                if (pointersCount == 1 && !isTransformLocked) {
-                    viewBeingTransformed!!.apply {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                            x = scalex + event.getRawX(event.findPointerIndex(active_pointer_id))
-                            y = scaley + event.getRawY(event.findPointerIndex(active_pointer_id))
-                        }
-
-                    }
-                }
-
-            }
-
-            MotionEvent.ACTION_POINTER_UP -> {
-                event.apply {
-                    if (getPointerId(actionIndex) == active_pointer_id) {
-                        var newPointerIndex = if (actionIndex == 0) 1 else 0
-
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                            scaley = viewBeingTransformed!!.y - getRawY(newPointerIndex)
-                            scalex = viewBeingTransformed!!.x - getRawX(newPointerIndex)
-                        }
-                        active_pointer_id = getPointerId(newPointerIndex)
-                    }
-
-                }
-
-            }
-
-        }
-        if (multiTouchGestureDetector != null) {
-            multiTouchGestureDetector?.onTouchEvent(event)
-        }
-
-
-        //            binding.frame.apply {
-        //
-        //                getHitRect(rectF)
-        //            }
-        //            (v as View).apply {
-        //                touchDelegate = TouchDelegate(rectF, binding.frame)
-        //            }
-    }
+//    private fun transformViewsBasedOnTouch(event: MotionEvent) {
+//        when (event.action and event.actionMasked) {
+//
+//            MotionEvent.ACTION_DOWN -> {
+//
+//
+//                var rectF = Rect()
+//                var j = 0;
+//
+//                for (i in dynamicViewwithIdHashmap.toSortedMap(reverseOrder())) {
+//
+//                    i.value.apply {
+//                        getHitRect(rectF)
+//                        if (rectF.contains(event.x.toInt(), event.y.toInt()))
+//                            j = 1
+//                    }
+//                    if (j == 1) {
+//                        isTransformLocked = false
+//                        viewBeingTransformed = i.value
+//                        break
+//                    }
+//                }
+//                if (j == 0)
+//                    isTransformLocked = true
+//
+//                if (viewBeingTransformed != null && !isTransformLocked) {
+//                    event.apply {
+//                        active_pointer_id = getPointerId(0)
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//                            scalex = viewBeingTransformed!!.x - getRawX(
+//                                findPointerIndex(active_pointer_id)
+//                            )
+//                            scaley = viewBeingTransformed!!.y - getRawY(
+//                                findPointerIndex(active_pointer_id)
+//                            )
+//                        }
+//
+//
+//                    }
+//                    // detectWhereTouched(view1!!.width, view1!!.height, event, view1!!)
+//                    if (!hashMapGesture.containsKey(viewBeingTransformed)
+//
+//                    ) {
+//                        multiTouchGestureDetector = MultiTouchGestureDetector(
+//                            context, setListener(viewBeingTransformed!!, 1.0f, 0f)
+//                        )
+//
+//                        hashMapGesture[viewBeingTransformed!!] = multiTouchGestureDetector!!
+//                    } else {
+//                        multiTouchGestureDetector = hashMapGesture[viewBeingTransformed!!]
+//                    }
+//                }
+//            }
+//
+//            MotionEvent.ACTION_MOVE -> {
+//                Log.d("eventttookk", event.action.toString())
+//                if (pointersCount == 1 && !isTransformLocked) {
+//                    viewBeingTransformed!!.apply {
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//                            x = scalex + event.getRawX(event.findPointerIndex(active_pointer_id))
+//                            y = scaley + event.getRawY(event.findPointerIndex(active_pointer_id))
+//                        }
+//
+//                    }
+//                }
+//
+//            }
+//
+//            MotionEvent.ACTION_POINTER_UP -> {
+//                event.apply {
+//                    if (getPointerId(actionIndex) == active_pointer_id) {
+//                        var newPointerIndex = if (actionIndex == 0) 1 else 0
+//
+//                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//                            scaley = viewBeingTransformed!!.y - getRawY(newPointerIndex)
+//                            scalex = viewBeingTransformed!!.x - getRawX(newPointerIndex)
+//                        }
+//                        active_pointer_id = getPointerId(newPointerIndex)
+//                    }
+//
+//                }
+//
+//            }
+//
+//        }
+//        if (multiTouchGestureDetector != null) {
+//            multiTouchGestureDetector?.onTouchEvent(event)
+//        }
+//
+//
+//        //            binding.frame.apply {
+//        //
+//        //                getHitRect(rectF)
+//        //            }
+//        //            (v as View).apply {
+//        //                touchDelegate = TouchDelegate(rectF, binding.frame)
+//        //            }
+//    }
 
 
     private fun downloadTransformedImage() {
         binding.constrait.apply {
 
-            if (width > 0 && height > 0 && binding.mainEditableImageView.drawable != null) {
-                var bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-                var canvas = Canvas(bitmap)
-                if (background != null && background is BitmapDrawable)
-                    canvas.drawBitmap(
-                        (background as BitmapDrawable).bitmap,
-                        0f,
-                        0f,
-                        null
-                    )
-                else if (background != null && background is ColorDrawable)
-                    canvas.drawColor((background as ColorDrawable).color)
-                else
-                    setBackgroundColor(Color.WHITE)
-                draw(canvas)
-                try {
-
-
-                    var outputStream = File.createTempFile(
-                        "okkk",
-                        "yess" + ".png",
-
-                        context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-                    ).let {
-
-                        FileOutputStream(it)
-                    }
-
-                    if (bitmap.compress(
-                            Bitmap.CompressFormat.PNG,
-                            100,
-                            outputStream
-                        )
-                    ) Toast.makeText(context, "Successfully Saved the Image ", Toast.LENGTH_SHORT)
-                        .show()
-                    else
-                        Toast.makeText(
-                            context,
-                            "Sorry could not save the image",
-                            Toast.LENGTH_SHORT
-                        )
-                            .show()
-
-                } catch (e: Exception) {
-                    Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show()
+            if (width > 0 && height > 0 ) {
+                with((activity as MainActivity)){
+                    saveBitmapToMemory()
                 }
             } else {
                 Toast.makeText(context, "Please select an image ", Toast.LENGTH_SHORT).show()
             }
         }
     }
+
+
 
 
     private fun attachViewPager() {
@@ -520,96 +480,8 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
         type: String,
         uri: String = "",
         textView: TextView? = null
-    ): View {
-        numberOfDynamicViewsCount++
-        var constraintSet = ConstraintSet()
-        var id =
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                View.generateViewId()
-            } else {
-                binding.constrait.childCount + 1
-            }
-
-
-        var dynamicView: View? = null
-        dynamicView = when (type) {
-            Constants.TYPE_TEXT -> {
-                textView
-
-            }
-            Constants.TYPE_IMAGE -> {
-
-                ImageView(context).apply {
-                    setImageURI(Uri.parse(uri))
-
-                    background = ResourcesCompat.getDrawable(
-                        resources,
-                        R.drawable.image_transparent_background,
-                        null
-                    )
-                    layoutParams = ConstraintLayout.LayoutParams(
-                        binding.constrait.width / 2,
-                        binding.constrait.height / 2
-                    )
-
-
-                }
-            }
-            else -> return TextView(context)
-        }
-
-
-
-        if (type != Constants.TYPE_TEXT)
-            dynamicView?.id = id
-
-        binding.constrait.addView(dynamicView)
-        constraintSet.clone(binding.constrait)
-        constraintSet.apply {
-            setMargin(
-                id,
-                ConstraintSet.TOP,
-                (numberOfDynamicViewsCount * margin * resources.displayMetrics.density).toInt()
-            )
-            setMargin(
-                id,
-                ConstraintSet.START,
-                (numberOfDynamicViewsCount * margin * resources.displayMetrics.density).toInt()
-            )
-
-
-            connect(
-                dynamicView?.id!!,
-                ConstraintSet.TOP,
-                ConstraintSet.PARENT_ID,
-                ConstraintSet.TOP
-            )
-            connect(
-                dynamicView?.id,
-                ConstraintSet.BOTTOM,
-                ConstraintSet.PARENT_ID,
-                ConstraintSet.BOTTOM,
-            )
-            connect(
-                dynamicView.id,
-                ConstraintSet.START,
-                ConstraintSet.PARENT_ID,
-                ConstraintSet.START,
-            )
-            connect(
-                dynamicView.id,
-                ConstraintSet.END,
-                ConstraintSet.PARENT_ID,
-                ConstraintSet.END,
-            )
-        }
-        constraintSet.applyTo(binding.constrait)
-        dynamicViewwithIdHashmap[id] = dynamicView!!
-        if (type != Constants.TYPE_TEXT)
-            binding.constrait.bringChildToFront(binding.mainEditableImageView)
-
-
-        return dynamicView!!
+    ) {
+     binding.constrait.generateViewDynamically(type,uri,textView)
     }
 
 
@@ -634,79 +506,5 @@ class RecreationFragment : Fragment(R.layout.fragment_recreation) {
     }
 
 
-    private fun setListener(
-        v: View,
-        scaleFactor1: Float,
-        rotationfactor: Float
-    ): MultiTouchGestureDetector.OnMultiTouchGestureListener {
-        var scaleFactor11 = scaleFactor1
-        var rotationfactor1 = rotationfactor
 
-        return object : MultiTouchGestureDetector.OnMultiTouchGestureListener {
-            override fun onScale(detector: MultiTouchGestureDetector?) {
-
-                v.apply {
-
-
-                        scaleFactor11 *= detector!!.scale
-                        scaleFactor11 = max(0.1f, min(scaleFactor11, 5.0f))
-                        scaleX = scaleFactor11
-                        scaleY = scaleFactor11
-                        when (viewTouchPoint) {
-                            3 -> {
-                                pivotX = 0f
-                                pivotY = 0f
-                            }
-                            2 -> {
-                                pivotX = v.width.toFloat()
-                                pivotY = 0f
-                            }
-                            1 -> {
-                                pivotX = 0f
-                                pivotY = v.height.toFloat()
-                            }
-                            0 -> {
-                                pivotX = v.width.toFloat()
-                                pivotY = v.height.toFloat()
-                            }
-                        }
-
-                    }
-
-
-            }
-
-            override fun onMove(detector: MultiTouchGestureDetector?) {
-                if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.Q) {
-                    if (pointersCount == 1) {
-                        v.x = v.x + detector!!.moveX
-                        v.y = v.y + detector!!.moveY
-                    }
-                }
-
-
-            }
-
-            override fun onRotate(detector: MultiTouchGestureDetector?) {
-
-
-
-                    rotationfactor1 += detector!!.rotation
-                    v.apply {
-
-                        rotation = rotationfactor1
-                    }
-
-
-            }
-
-            override fun onBegin(detector: MultiTouchGestureDetector?): Boolean {
-                return true
-            }
-
-            override fun onEnd(detector: MultiTouchGestureDetector?) {
-
-            }
-        }
-    }
 }

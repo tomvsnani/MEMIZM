@@ -5,7 +5,6 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.drawToBitmap
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -32,10 +31,14 @@ class MainContentRecyclerAdapter(var activity: Activity?) :
                         isInProgressTemplate = true
                     })
 
+                    this@MainContentViewHolder.binding.imageView.apply {
 
-                    editingImageBitmap =
-                        this@MainContentViewHolder.binding.imageView.drawToBitmap()
+                        with((activity as MainActivity)){
+                            if(width>0 && height>0)
+                         editingImageBitmap=convertToBitmapWithBg()
+                        }
 
+                    }
                     modelThatIsBeingEdited=currentList[adapterPosition].copy()
 
 
@@ -86,7 +89,7 @@ class MainContentRecyclerAdapter(var activity: Activity?) :
 
     override fun onBindViewHolder(holder: MainContentViewHolder, position: Int) {
         var model = currentList[position]
-        Glide.with(holder.itemView.context).load(Constants.IMAGE_URL + model.image)
+        Glide.with(holder.itemView.context).load(Constants.IMAGE_URL + model.images_path)
             .into(holder.binding.imageView)
 
 

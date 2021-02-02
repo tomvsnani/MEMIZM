@@ -8,8 +8,8 @@ class Constants {
         const val TYPE_LOGO="logo"
 
 
-        const val BASE_URL="https://memeizm.com/api/"
+        const val BASE_URL="http://memizam.earnadda.com/api/"
 
-        const val IMAGE_URL="https://memeizm.com/"
+        const val IMAGE_URL="http://memizam.earnadda.com/"
     }
 }

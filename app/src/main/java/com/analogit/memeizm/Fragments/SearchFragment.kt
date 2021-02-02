@@ -11,6 +11,7 @@ import com.analogit.memeizm.Adapters.SearchFragmentCategoryAdapter
 import com.analogit.memeizm.Adapters.SearchFragmentMainContentAdapter
 import com.analogit.memeizm.MainActivity
 import com.analogit.memeizm.Models.MainCategoryModelClass
+import com.analogit.memeizm.Models.MainContentResponseModel
 import com.analogit.memeizm.Models.MainResponseModelClass
 import com.analogit.memeizm.R
 import com.analogit.memeizm.databinding.FragmentSearchBinding
@@ -40,12 +41,12 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
         setUpCategoryAdapter()
 
-        setUpMainContentAdapter()
+
 
 
     }
 
-    private fun setUpMainContentAdapter() {
+    private fun setUpMainContentAdapter(id:String) {
         val adapter = SearchFragmentMainContentAdapter(activity)
         binding.searchRcyclerRecycler.apply {
             this.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
@@ -53,7 +54,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         }
 
         (activity as MainActivity).apply {
-            retrofitInterface.getSearchPageTemplates()
+            retrofitInterface.getSearchPageTemplates(id)
                 .enqueue(object : Callback<MainResponseModelClass> {
                     override fun onResponse(
                         call: Call<MainResponseModelClass>,
@@ -96,13 +97,52 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             this.adapter = adapter
         }
 
-        var list = listOf<MainCategoryModelClass>(
-            MainCategoryModelClass("Today", "1", isSelected = true),
-            MainCategoryModelClass("Trending", "2"), MainCategoryModelClass("This Week", "3"),
-            MainCategoryModelClass("Popular", "4")
-        )
 
-        adapter.submitList(list)
+        (activity as MainActivity).apply {
+            retrofitInterface.getSearchCollections()
+                .enqueue(object : Callback<MainContentResponseModel> {
+                    override fun onResponse(
+                        call: Call<MainContentResponseModel>,
+                        response: Response<MainContentResponseModel>
+                    ) {
+                        if (response.isSuccessful) {
+                            if(response.body()?.data!=null && response.body()?.data?.isNotEmpty()!!)
+                            setUpMainContentAdapter(response.body()?.data!![0].collection_id)
+                            adapter.submitList(response.body()?.data)
+                        } else {
+                            (activity as MainActivity).binding.progressbarcard.visibility=View.GONE
+                            Toast.makeText(
+                                context,
+                                response.toString(),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+                        Log.d("datareceived", response.toString())
+                        (activity as MainActivity).binding.progressbarcard.visibility=View.GONE
+                    }
+
+                    override fun onFailure(call: Call<MainContentResponseModel>, t: Throwable) {
+                        (activity as MainActivity).binding.progressbarcard.visibility=View.GONE
+                        Toast.makeText(
+                            context,
+                            "Sorry there is some problem in fetching templates",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                        Log.d("datareceived", t.toString())
+                    }
+                })
+        }
+
+
+//        var list = listOf<MainCategoryModelClass>(
+//            MainCategoryModelClass("Today", "1", isSelected = true),
+//            MainCategoryModelClass("Trending", "2"), MainCategoryModelClass("This Week", "3"),
+//            MainCategoryModelClass("Popular", "4")
+//        )
+
+//        adapter.submitList(list)
     }
 
     override fun onStop() {

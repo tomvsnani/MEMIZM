@@ -8,15 +8,15 @@ import androidx.room.PrimaryKey
 data class MainContentModel(
     @PrimaryKey
     var id: String = "",
-    var image: String = "",
-    var isFav: Boolean = false,
-    var shareCount: String = "",
-    var tag_title: String = "",
-    var isInProgressTemplate:Boolean=false,
-    var isInMyDownloads:Boolean=false,
-    var isSaved:Boolean=false,
+    var images_path: String? = "",
+    var isFav: Boolean? = false,
+    var shareCount: String? = "",
+    var tag_title: String? = "",
+    var isInProgressTemplate:Boolean?=false,
+    var isInMyDownloads:Boolean?=false,
+    var isSaved:Boolean?=false,
 
-) {
+    ) {
     companion object {
         var diff = object : DiffUtil.ItemCallback<MainContentModel>() {
             override fun areItemsTheSame(
@@ -31,7 +31,7 @@ data class MainContentModel(
                 oldItem: MainContentModel,
                 newItem: MainContentModel
             ): Boolean {
-                return oldItem.image == newItem.image
+                return oldItem.images_path == newItem.images_path
             }
         }
     }

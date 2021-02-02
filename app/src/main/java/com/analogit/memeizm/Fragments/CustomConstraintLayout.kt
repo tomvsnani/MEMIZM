@@ -8,6 +8,7 @@ import android.os.Build
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
+import android.view.MotionEvent.ACTION_OUTSIDE
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
@@ -16,11 +17,17 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.graphics.drawable.DrawableCompat
+import androidx.core.view.marginBottom
+import androidx.core.view.marginTop
+import androidx.recyclerview.widget.GridLayoutManager
 import com.analogit.memeizm.Constants
 import com.analogit.memeizm.R
 import com.dinuscxj.gesture.MultiTouchGestureDetector
 import kotlin.math.max
 import kotlin.math.min
+
+
 
 
 class CustomConstraintLayout @JvmOverloads constructor(
@@ -29,42 +36,52 @@ class CustomConstraintLayout @JvmOverloads constructor(
 ) : ConstraintLayout(context, attributeSet) {
 
 
+    private var isMovingIntoBounds = true
     var numberOfDynamicViewsCount = 0
     var margin = 40
     lateinit var mainEditableImageView: ImageView
     lateinit var dynamicViewwithIdHashmap: HashMap<Int, View>
     lateinit var viewBeingTransformed: View
     var isTransformLocked = false
-
     private var scalex = 1f
     private var scaley = 1f
     var active_pointer_id = -1
     var pointersCount = -1
     var multiTouchGestureDetector: MultiTouchGestureDetector? = null
     var hashMapGesture = HashMap<View, MultiTouchGestureDetector>()
+    var type=""
+
+
+
 
 
     init {
+
+
         viewTreeObserver.addOnGlobalLayoutListener(object :
             OnGlobalLayoutListener {
             override fun onGlobalLayout() {
 
-                if (findViewById<ImageView>(R.id.image) != null)
-                    mainEditableImageView = findViewById(R.id.image)
+                if(type.isNotEmpty()){
+                   background= ResourcesCompat.getDrawable(resources,R.drawable.template_shape_border,null)
+                }
+
+
+                    mainEditableImageView = getChildAt(0) as ImageView
 
                 dynamicViewwithIdHashmap = HashMap()
 
-                if (this@CustomConstraintLayout::mainEditableImageView.isInitialized)
-                    mainEditableImageView.setOnClickListener {
-                        Log.d("clickeddd", childCount.toString())
-                        generateViewDynamically(
-                            Constants.TYPE_TEXT,
-                            textView = TextView(context).apply {
-                                text = "From custom View"
-                                setBackgroundColor(Color.WHITE)
-                                setTextColor(Color.BLACK)
-                            })
-                    }
+//                if (this@CustomConstraintLayout::mainEditableImageView.isInitialized)
+//                    mainEditableImageView.setOnClickListener {
+//                        Log.d("clickeddd", childCount.toString())
+//                        generateViewDynamically(
+//                            Constants.TYPE_TEXT,
+//                            textView = TextView(context).apply {
+//                                text = "From custom View"
+//                                setBackgroundColor(Color.WHITE)
+//                                setTextColor(Color.BLACK)
+//                            })
+//                    }
 
 
                 viewTreeObserver.removeOnGlobalLayoutListener(this)
@@ -74,13 +91,24 @@ class CustomConstraintLayout @JvmOverloads constructor(
     }
 
     override fun onInterceptTouchEvent(event: MotionEvent?): Boolean {
-        return numberOfDynamicViewsCount == 2.toInt()
-        
+        return type.isEmpty() || childCount>=2
+
+    }
+
+    fun setLayoutType(type:String=""){
+        this.type=type
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        pointersCount= event?.pointerCount!!
+        pointersCount = event?.pointerCount!!
+
+
+
         when (event?.action!! and event.actionMasked) {
+
+            MotionEvent.ACTION_OUTSIDE -> {
+                Log.d("outside", "yesss")
+            }
 
 
             MotionEvent.ACTION_DOWN -> {
@@ -135,15 +163,36 @@ class CustomConstraintLayout @JvmOverloads constructor(
             }
 
             MotionEvent.ACTION_MOVE -> {
-                Log.d("event?ttookk", event?.action.toString())
-                if (pointersCount == 1 && !isTransformLocked) {
-                    viewBeingTransformed!!.apply {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                            x = scalex + event?.getRawX(event?.findPointerIndex(active_pointer_id))
-                            y = scaley + event?.getRawY(event?.findPointerIndex(active_pointer_id))
-                        }
+                try {
+                    isMovingIntoBounds = event.run {
+
+                        preventScreenFromGoingRightOfScreen() && preventFromGoingToLeftOfScreen() &&
+
+                                preventSCreenFromGoingTop() && preventSCreenFromGoingBottom()
 
                     }
+                } catch (e: Exception) {
+                }
+
+                if (true) {
+
+
+                    if (pointersCount == 1 && !isTransformLocked) {
+
+
+                        viewBeingTransformed!!.apply {
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                                x = scalex + event?.getRawX(
+                                    event?.findPointerIndex(active_pointer_id)
+                                )
+                                y = scaley + event?.getRawY(
+                                    event?.findPointerIndex(active_pointer_id)
+                                )
+                            }
+
+                        }
+                    }
+
                 }
 
             }
@@ -169,12 +218,37 @@ class CustomConstraintLayout @JvmOverloads constructor(
             }
 
         }
+
         if (multiTouchGestureDetector != null) {
             multiTouchGestureDetector?.onTouchEvent(event)
         }
+
+
+
         return true
     }
-    
+
+    private fun MotionEvent.preventSCreenFromGoingTop(): Boolean {
+        return (((viewBeingTransformed.y < 0) && (getHistoricalY(
+            historySize - 1
+        ) < y)) || viewBeingTransformed.y >= 0)
+    }
+
+    private fun MotionEvent.preventSCreenFromGoingBottom(): Boolean {
+        return ((((viewBeingTransformed.y + viewBeingTransformed.height > viewBeingTransformed.rootView.height) && (getHistoricalY(
+            historySize - 1
+        ) > y)) || viewBeingTransformed.y + viewBeingTransformed.height <= viewBeingTransformed.rootView.height))
+    }
+
+    private fun MotionEvent.preventScreenFromGoingRightOfScreen() =
+        ((((viewBeingTransformed.x + viewBeingTransformed.width > viewBeingTransformed.rootView.width) && (getHistoricalX(
+            historySize - 1
+        ) > x)) || viewBeingTransformed.x + viewBeingTransformed.width <= viewBeingTransformed.rootView.width))
+
+    private fun MotionEvent.preventFromGoingToLeftOfScreen() =
+        ((viewBeingTransformed.x < 0) && (getHistoricalX(
+            historySize - 1
+        ) < x)) || viewBeingTransformed.x >= 0
 
 
     public fun generateViewDynamically(
@@ -184,18 +258,19 @@ class CustomConstraintLayout @JvmOverloads constructor(
     ): View {
         numberOfDynamicViewsCount++
         var constraintSet = ConstraintSet()
-        var id =
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                View.generateViewId()
-            } else {
-                childCount + 1
-            }
-
+        var id = childCount + 1
 
         var dynamicView: View? = null
         dynamicView = when (type) {
             Constants.TYPE_TEXT -> {
-                textView
+                textView.apply {
+                    this?.background = ResourcesCompat.getDrawable(
+                        resources,
+                        R.drawable.corner_radius_stroke_drawable,
+                        null
+                    )
+                    DrawableCompat.setTint(this?.background!!, Color.BLUE)
+                }
 
             }
             Constants.TYPE_IMAGE -> {
@@ -208,9 +283,23 @@ class CustomConstraintLayout @JvmOverloads constructor(
                         R.drawable.image_transparent_background,
                         null
                     )
+
+                    adjustViewBounds = true
+                    setBackgroundColor(Color.RED)
+                    measure(
+                        MeasureSpec.makeMeasureSpec(
+                            this@CustomConstraintLayout.width / 2,
+                            MeasureSpec.AT_MOST
+                        ),
+                        MeasureSpec.makeMeasureSpec(
+                            mainEditableImageView.height - (this.marginTop + this.marginBottom + this@CustomConstraintLayout.marginTop + this@CustomConstraintLayout.marginBottom),
+                            MeasureSpec.AT_MOST
+                        )
+                    )
+
                     layoutParams = ConstraintLayout.LayoutParams(
-                        width / 2,
-                        height / 2
+                        measuredWidth,
+                        measuredHeight
                     )
 
 
@@ -220,19 +309,19 @@ class CustomConstraintLayout @JvmOverloads constructor(
         }
 
 
-//        if (type != Constants.TYPE_TEXT)
+
         dynamicView?.id = id
 
         addView(dynamicView)
         constraintSet.clone(this)
         constraintSet.apply {
             setMargin(
-                id,
+                dynamicView?.id!!,
                 ConstraintSet.TOP,
                 (numberOfDynamicViewsCount * margin * resources.displayMetrics.density).toInt()
             )
             setMargin(
-                id,
+                dynamicView?.id!!,
                 ConstraintSet.START,
                 (numberOfDynamicViewsCount * margin * resources.displayMetrics.density).toInt()
             )
@@ -264,7 +353,7 @@ class CustomConstraintLayout @JvmOverloads constructor(
             )
         }
         constraintSet.applyTo(this)
-        dynamicViewwithIdHashmap[id] = dynamicView!!
+        dynamicViewwithIdHashmap[dynamicView?.id!!] = dynamicView!!
         if (type != Constants.TYPE_TEXT) {
             if (this::mainEditableImageView.isInitialized)
                 bringChildToFront(mainEditableImageView)

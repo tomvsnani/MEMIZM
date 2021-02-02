@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_main.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customizable_shape_8.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customizable_shape_8.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\text_color_row_layout.xml",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\text_color_row_layout.xml"
     },
@@ -16,12 +20,24 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\categories_row_layout.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custoizable_shape_1.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\custoizable_shape_1.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_alert_dialog.xml",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\custom_alert_dialog.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customizable_shape_2.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customizable_shape_2.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\my_templates_row_layout.xml",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\my_templates_row_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customizable_shape_5.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customizable_shape_5.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_recreation.xml",
@@ -68,12 +84,24 @@
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_saved_template.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customizable_shape_1.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customizable_shape_1.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_view_android.xml",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\custom_view_android.xml"
     },
     {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customzable_shape_7.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customzable_shape_7.xml"
+    },
+    {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\custom_text_tab_row_layout.xml",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\custom_text_tab_row_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customizable_shape_4.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customizable_shape_4.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_logo_tab.xml",
@@ -90,6 +118,22 @@
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_content_recycler_row_layout.xml",
         "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\main_content_recycler_row_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customizable_shape_6.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customizable_shape_6.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\customizable_shape_3.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\customizable_shape_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_different_shapes_recreation.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\fragment_different_shapes_recreation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\different_shapes_templates_row_layout.xml",
+        "source": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\src\\main\\res\\layout\\different_shapes_templates_row_layout.xml"
     },
     {
         "merged": "C:\\Users\\Analog\\AndroidStudioProjects\\MEMEIZM\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_gallary_tab.xml",
